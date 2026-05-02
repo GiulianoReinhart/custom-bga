@@ -2,13 +2,10 @@ name: Purge jsDelivr cache
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   purge:
     runs-on: ubuntu-latest
     steps:
-      - name: Purge jsDelivr
-        run: |
-          curl -X GET "https://purge.jsdelivr.net/gh/GiulianoReinhart/custom-bga@main/custom.css"
+      - run: curl https://purge.jsdelivr.net/gh/GiulianoReinhart/custom-bga@main
