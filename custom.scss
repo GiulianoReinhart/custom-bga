@@ -10,71 +10,89 @@
    GLOBAL
    ========================================================= */
 
+$header-height: 60px;
+$header-bg: #eaeaea;
+$header-icons-color: #0b72b5;
+
+/* Base */
+
 #custom_css {
   font-family: monospace !important;
 }
 
 body {
   font-family: 'Fira Sans Condensed';
-  --header-icons-color: #0b72b5; /* #00408f */
+  --header-icons-color: #{$header-icons-color};
 }
 
-/* Wider layout: 3-column grid for game progress list */
+/* Layout */
+
 @media (min-width: 1468px) {
   .bga-game-progress-list-section-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   }
 }
 
-/* Hide specific tooltip */
+/* Tooltip */
+
 .dijitTooltipDialogPopup[aria-label='turnBasedNotesIncent'] {
   display: none !important;
 }
 
+/* Header */
+
 @media (min-width: 900px) {
   .bga-menu-bar {
-    height: 60px !important;
-    background: #eaeaea !important;
+    height: $header-height !important;
+    background: $header-bg !important;
     box-shadow: none !important;
+
+    &-items {
+      a:last-child {
+        align-items: flex-start !important;
+
+        > div {
+          height: 43px !important;
+        }
+
+        .emblempremium_big {
+          top: 0 !important;
+          background-position: -16px -587px !important;
+        }
+      }
+    }
   }
 
-  .bga-menu-bar-items a:last-child {
-    align-items: flex-start !important;
-  }
-
-  .bga-menu-bar-items a:last-child > div {
-    height: 43px !important;
-  }
-
-  .bga-menu-bar-items a:last-child .emblempremium_big {
-    top: 0 !important;
-    background-position: -16px -587px !important;
-  }
-}
-
-@media (min-width: 900px) {
   .bga-omni-bar-results {
-    top: 60px !important;
-    min-height: calc(100dvh - 60px) !important;
+    top: $header-height !important;
+    min-height: calc(100dvh - #{$header-height}) !important;
   }
 }
+
+/* Omni bar */
 
 @media (min-width: 600px) {
-  .bga-omni-bar:after {
-    box-shadow: none !important;
-    border-radius: 6px;
+  .bga-omni-bar {
+    &:after {
+      box-shadow: none !important;
+      border-radius: 6px;
+    }
   }
 }
+
+/* Sub menu */
 
 .bga-sub-menu {
   background-color: var(--header-icons-color) !important;
+
+  &-item {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+  }
 }
 
-.bga-sub-menu-item {
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 400;
-}
+/* Icons */
 
 #bga_extension_chat_icon,
 #bga_extension_dark_mode_icon {
@@ -82,28 +100,39 @@ body {
 }
 
 @media (min-width: 600px) {
-  .bga-menu-bar > div:nth-last-child(2) .tablet\:ml-6 {
-    margin-left: 0;
-  }
+  .bga-menu-bar {
+    > div:nth-last-child(2) {
+      .tablet\:ml-6 {
+        margin-left: 0;
+      }
 
-  .bga-menu-bar > div:nth-last-child(2) .bga-tables-icon {
-    width: auto !important;
+      .bga-tables-icon {
+        width: auto !important;
+
+        a {
+          margin-right: 15px;
+        }
+      }
+    }
   }
 
   #bga_extension_chat_icon,
-  #bga_extension_dark_mode_icon,
-  .bga-menu-bar > div:nth-last-child(2) .bga-tables-icon a {
+  #bga_extension_dark_mode_icon {
     margin-right: 15px;
-  }
 
-  :is(#bga_extension_chat_icon, #bga_extension_dark_mode_icon) i {
-    font-size: 25px !important;
+    i {
+      font-size: 25px !important;
+    }
   }
 }
+
+/* Active menu item */
 
 .bga-menu-bar-items__menu-item--active {
   color: #f0b353 !important;
 }
+
+/* Buttons */
 
 .bga-player-avatar--premium .bga-player-avatar__ring,
 .bga-button-holder,
@@ -117,149 +146,105 @@ body {
   box-shadow: none !important;
 }
 
+/* Button variants */
+
+@mixin button-variant($base, $hover, $active, $color: null) {
+  background: $base !important;
+
+  @if $color {
+    color: $color;
+  }
+
+  &:hover {
+    background: $hover !important;
+  }
+
+  &:active {
+    background: $active !important;
+  }
+}
+
 .bga-button--blue,
 .bgabutton_blue {
-  background: #0b72b5 !important;
-}
-
-.bga-button--blue:hover,
-.bgabutton_blue:hover {
-  background: #0692ea !important;
-}
-
-.bga-button--blue:active,
-.bgabutton_blue:active {
-  background: #244587 !important;
+  @include button-variant(#0b72b5, #0692ea, #244587);
 }
 
 .bga-button--gray,
 .bga-button_gray {
-  background: #dcdcdc !important;
-  color: var(--header-icons-color) !important;
-}
-
-.bga-button--gray:hover,
-.bga-button_gray:hover {
-  background: #cacaca !important;
-}
-
-.bga-button--gray:active,
-.bga-button_gray:active {
-  background: #f2f2f2 !important;
+  @include button-variant(#dcdcdc, #cacaca, #f2f2f2, var(--header-icons-color));
 }
 
 .bga-button--darkgray,
 .bga-button_darkgray {
-  background: #787878 !important;
-}
-
-.bga-button--darkgray:hover,
-.bga-button_darkgray:hover {
-  background: #8e8e8e !important;
-}
-
-.bga-button--darkgray:active,
-.bga-button_darkgray:active {
-  background: #888888 !important;
+  @include button-variant(#787878, #8e8e8e, #888888);
 }
 
 .bga-button--red,
 .bga-button_red {
-  background: #e42421 !important;
-}
-
-.bga-button--red:hover,
-.bga-button_red:hover {
-  background: #ff6247 !important;
-}
-
-.bga-button--red:active,
-.bga-button_red:active {
-  background: #86211f !important;
+  @include button-variant(#e42421, #ff6247, #86211f);
 }
 
 .bga-button--green,
 .bga-button_green {
-  background: #89a538 !important;
-}
-
-.bga-button--green:hover,
-.bga-button_green:hover {
-  background: #9fc238 !important;
-}
-
-.bga-button--green:active,
-.bga-button_green:active {
-  background: #89a538 !important;
+  @include button-variant(#89a538, #9fc238, #89a538);
 }
 
 .bga-button--orange,
 .bga-button_orange {
-  background: #e76c30 !important;
-}
-
-.bga-button--orange:hover,
-.bga-button_orange:hover {
-  background: #ef885a !important;
-}
-
-.bga-button--orange:active,
-.bga-button_orange:active {
-  background: #e42421 !important;
+  @include button-variant(#e76c30, #ef885a, #e42421);
 }
 
 .bga-button--purple,
 .bga-button_purple {
-  background: #9a3ff2 !important;
-}
-
-.bga-button--purple:hover,
-.bga-button_purple:hover {
-  background: #a142ff !important;
-}
-
-.bga-button--purple:active,
-.bga-button_purple:active {
-  background: #6a279e !important;
+  @include button-variant(#9a3ff2, #a142ff, #6a279e);
 }
 
 .bga-button--teal,
 .bga-button_teal {
-  background: #10abbd !important;
-  color: white;
+  @include button-variant(#10abbd, #21c4d6, #007480, white);
 }
 
-.bga-button--teal:hover,
-.bga-button_teal:hover {
-  background: #21c4d6 !important;
-}
-
-.bga-button--teal:active,
-.bga-button_teal:active {
-  background: #007480 !important;
-}
+/* Quick play */
 
 .bga-quick-play-widget__item.svelte-1s7mdl1 {
   background: #ccc !important;
   box-shadow: none !important;
+
+  &:hover {
+    background: #aaa !important;
+  }
 }
 
-.bga-quick-play-widget__item:hover {
-  background: #aaa !important;
-}
+/* Dropdown */
 
 .bga-dropdown-button {
   color: var(--header-icons-color) !important;
+
+  &-value {
+    border-bottom: none !important;
+    background: #dcdcdc !important;
+  }
+
+  &:hover .bga-dropdown-button-split {
+    background: #0692ea !important;
+  }
+
+  &:active .bga-dropdown-button-split,
+  &.bga-dropdown--open .bga-dropdown-button-split {
+    background: #244587 !important;
+  }
+
+  .bga-dropdown-button-split {
+    border-bottom: none !important;
+    background: #0b72b5 !important;
+  }
 }
 
-.bga-dropdown-button-value {
-  border-bottom: none !important;
-  background: #dcdcdc !important;
-}
-
-.bga-panel-table-configuration__player-row .bga-dropdown-button-value {
-  background: white !important;
-  padding: 0 20px 0 var(--valuePadding, 0.5rem) !important;
+.bga-panel-table-configuration__player-row {
+  .bga-dropdown-button-value {
+    background: white !important;
+    padding: 0 20px 0 var(--valuePadding, 0.5rem) !important;
+  }
 }
 
 .bga-player-count-dropdown__dot,
@@ -267,61 +252,75 @@ body {
   right: 6px !important;
 }
 
-.bga-dropdown-button .bga-dropdown-button-split {
-  border-bottom: none !important;
-  background: #0b72b5 !important;
-}
-
-.bga-dropdown-button:hover .bga-dropdown-button-split {
-  background: #0692ea !important;
-}
-
-.bga-dropdown-button:active .bga-dropdown-button-split,
-.bga-dropdown--open .bga-dropdown-button-split {
-  background: #244587 !important;
-}
-
 .bga-dropdown-option.svelte-szfc5g.svelte-szfc5g {
   border-bottom: none !important;
 }
+
+/* Disabled */
 
 .bgabutton.disabled {
   background: #787878 !important;
   background: -o-linear-gradient(top, #888, #787878) !important;
 }
 
+/* Misc */
+
 .bga-omni-bar > form {
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
 }
 
-.bgaext_lobby .row {
-  max-width: 1200px;
+/* Lobby */
+
+.bgaext_lobby {
+  .row {
+    max-width: 1200px;
+  }
+
+  .pagesection__content {
+    padding: 43px 33px 20px;
+  }
+
+  .wannaplay_games_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
-.bgaext_lobby .pagesection__content {
-  padding: 43px 33px 20px;
-}
+/* Tournament */
 
-.bgaext_lobby .wannaplay_games_list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.bga-tournament__state .bga-draggable-scrollable__track {
-  height: unset !important;
+.bga-tournament__state {
+  .bga-draggable-scrollable__track {
+    height: unset !important;
+  }
 }
 
 /* =========================================================
    BGA BORDER RADIUS
    ========================================================= */
 
-.bga-filter-tag,
-.bga-filter-tag.bga-filter-tag--sm,
-.bga-filter-tag.bga-filter-tag--xs {
-  border-radius: 8px !important;
+/* =========================================================
+   BGA BORDER RADIUS
+   ========================================================= */
+
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 18px;
+$radius-xl: 38px;
+
+/* Tags */
+
+.bga-filter-tag {
+  border-radius: $radius-sm !important;
+
+  &.bga-filter-tag--sm,
+  &.bga-filter-tag--xs {
+    border-radius: $radius-sm !important;
+  }
 }
+
+/* Generic elements */
 
 .bga-button,
 .bga-button-holder,
@@ -329,12 +328,18 @@ body {
 .bga-button--gray,
 .bga-omni-bar:after,
 .bga-highlight-animation {
-  border-radius: 12px !important;
+  border-radius: $radius-md !important;
 }
 
-panel-block--buttons:not(.panel-block--buttons--mode-how-to-play) .panel-block--buttons__play-wrapper {
-  border-radius: 18px 18px 0 0 !important;
+/* Panels */
+
+.panel-block--buttons:not(.panel-block--buttons--mode-how-to-play) {
+  .panel-block--buttons__play-wrapper {
+    border-radius: $radius-lg $radius-lg 0 0 !important;
+  }
 }
+
+/* Square overrides */
 
 .bga-button-holder.bga-button-holder--square,
 .bga-button--square,
@@ -342,106 +347,143 @@ panel-block--buttons:not(.panel-block--buttons--mode-how-to-play) .panel-block--
   border-radius: 0 !important;
 }
 
+/* Split buttons */
+
 .bga-button-inner.bga-button-plus {
   border-top-left-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
 }
 
-html[dir='ltr'] .bga-omni-bar_button {
-  border-top-left-radius: 0 !important;
-  border-bottom-left-radius: 0 !important;
+/* Directional (LTR / RTL) */
+
+html[dir='ltr'] {
+  .bga-omni-bar_button {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
 }
 
-html[dir='rtl'] .bga-omni-bar_button {
-  border-top-right-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
+html[dir='rtl'] {
+  .bga-omni-bar_button {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+
+  .bga-dropdown {
+    .bga-dropdown-button-split {
+      border-radius: $radius-md 0 0 $radius-md !important;
+    }
+  }
+
+  .bga-dropdown-button-value {
+    border-radius: 0 $radius-md $radius-md 0 !important;
+  }
 }
+
+/* Menu */
 
 .bga-menu-bar-items__selection {
-  border-top-left-radius: 12px !important;
-  border-top-right-radius: 12px !important;
+  border-top-left-radius: $radius-md !important;
+  border-top-right-radius: $radius-md !important;
 }
 
-.bga-player-menu__top.svelte-1ri87l2.svelte-1ri87l2 {
-  border-radius: 0 0 18px 18px !important;
+/* Player menu */
+
+.bga-player-menu__top {
+  border-radius: 0 0 $radius-lg $radius-lg !important;
   box-shadow: none !important;
 }
 
-.bga-player-menu__bottom.svelte-1ri87l2.svelte-1ri87l2 {
-  border-radius: 18px 18px 0 0 !important;
+.bga-player-menu__bottom {
+  border-radius: $radius-lg $radius-lg 0 0 !important;
   box-shadow: none !important;
 }
+
+/* Table configuration */
 
 .bga-panel-table-configuration,
 .bga-panel-table-configuration--selected {
   border: none !important;
-  border-radius: 18px !important;
+  border-radius: $radius-lg !important;
 }
 
-.bga-dropdown-button-value,
-html[dir='rtl'] .bga-dropdown .bga-dropdown-button-split {
-  border-radius: 12px 0 0 12px !important;
+/* Dropdown */
+
+.bga-dropdown-button {
+  &-value {
+    border-radius: $radius-md 0 0 $radius-md !important;
+  }
+
+  .bga-dropdown-button-split {
+    border-radius: 0 $radius-md $radius-md 0 !important;
+  }
 }
 
-.bga-dropdown-button .bga-dropdown-button-split,
-html[dir='rtl'] .bga-dropdown-button-value {
-  border-radius: 0 12px 12px 0 !important;
-}
+/* Lobby speed */
 
-.bga-lobby-speed-selector__bar.svelte-hodg6x.svelte-hodg6x {
-  border-radius: 38px !important;
+.bga-lobby-speed-selector__bar {
+  border-radius: $radius-xl !important;
   box-shadow: none !important;
   border: none !important;
 }
 
 .bga-lobby-speed-selector__slider {
   background: var(--sliderColor) !important;
-  color: #ffffff !important;
+  color: #fff !important;
 }
+
+/* Toggle */
 
 .bga-toggle {
   border-radius: 40px !important;
   box-shadow: none !important;
   background: #ccc !important;
+
+  &__slider {
+    width: unset !important;
+    aspect-ratio: 1 !important;
+    border-radius: 100px !important;
+    background: white !important;
+    box-shadow: none !important;
+    scale: 1.05 !important;
+  }
+
+  &--on {
+    .bga-toggle__slider {
+      left: unset !important;
+      translate: 50% !important;
+      color: #0b72b5 !important;
+    }
+  }
 }
 
-.bga-toggle__slider {
-  width: unset !important;
-  aspect-ratio: 1 !important;
-  border-radius: 100px !important;
-  background: white !important;
-  box-shadow: none !important;
-  scale: 1.05 !important;
-}
-
-.bga-toggle--on .bga-toggle__slider {
-  left: unset !important;
-  translate: 50% !important;
-  color: #0b72b5 !important;
-}
+/* Panels */
 
 .panel-block--buttons:not(.panel-block--buttons--mode-how-to-play) .panel-block--buttons__play-wrapper,
 .bga-page-section .bga-page-section__content {
   border: none !important;
   background: #ddd !important;
-  border-radius: 18px !important;
+  border-radius: $radius-lg !important;
 }
 
-.panel-block--buttons:not(.panel-block--buttons--mode-how-to-play) .panel-block--buttons__play-wrapper {
-  border-bottom-right-radius: 0 !important;
-  border-bottom-left-radius: 0 !important;
+.panel-block--buttons:not(.panel-block--buttons--mode-how-to-play) {
+  .panel-block--buttons__play-wrapper {
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
 }
+
+/* Game options */
 
 .bga-game-option-item-choice__selector,
 .bga-game-option-item-bool {
   background: white !important;
   border-radius: 100px !important;
   box-shadow: none !important;
-}
 
-.bga-game-option-item-choice__selector:not(:disabled):hover,
-.bga-game-option-item-bool:not(:disabled):hover {
-  background: #f9f9f9 !important;
+  &:not(:disabled):hover {
+    background: #f9f9f9 !important;
+  }
 }
 
 .bga-checkbox__checkbox {
@@ -450,13 +492,17 @@ html[dir='rtl'] .bga-dropdown-button-value {
   box-shadow: none !important;
 }
 
-.bga-checkbox--checked .bga-checkbox__checkbox {
-  background-color: var(--background-color) !important;
+.bga-checkbox--checked {
+  .bga-checkbox__checkbox {
+    background-color: var(--background-color) !important;
+  }
 }
+
+/* Option description */
 
 .bga-game-option-messages__option-description {
   background: linear-gradient(180deg, #ddd, #fff) !important;
-  border-radius: 0 0 12px 12px !important;
+  border-radius: 0 0 $radius-md $radius-md !important;
   color: rgba(78, 78, 78, var(--tw-text-opacity)) !important;
 }
 
@@ -464,32 +510,36 @@ html[dir='rtl'] .bga-dropdown-button-value {
   display: none !important;
 }
 
-.bga-lobby-table-item-wrap > div:last-child {
-  background: #ddd !important;
-  height: 18px !important;
-}
+/* Lobby table */
 
-.bga-lobby-table-item-wrap:nth-last-of-type(2) > div:last-child {
-  display: none !important;
-}
+.bga-lobby-table-item-wrap {
+  > div:last-child {
+    background: #ddd !important;
+    height: 18px !important;
+  }
 
-.bga-lobby-table-item-wrap .bga-lobby-table-item {
-  background: #ddd !important;
-}
+  &:nth-last-of-type(2) > div:last-child {
+    display: none !important;
+  }
 
-.bga-lobby-table-item-wrap .bga-lobby-table-item--selected {
-  background: #ccc !important;
-}
+  .bga-lobby-table-item {
+    background: #ddd !important;
 
-.bga-lobby-table-item-wrap .bga-lobby-table-item__pointer {
-  filter: none !important;
-  top: 0 !important;
-  height: 100% !important;
-  right: calc(-1 * var(--right-gap) - 36px) !important;
-}
+    &--selected {
+      background: #ccc !important;
+    }
 
-.bga-lobby-table-item-wrap .bga-lobby-table-item__pointer stop {
-  stop-color: #ccc !important;
+    &__pointer {
+      filter: none !important;
+      top: 0 !important;
+      height: 100% !important;
+      right: calc(-1 * var(--right-gap) - 36px) !important;
+
+      stop {
+        stop-color: #ccc !important;
+      }
+    }
+  }
 }
 
 .bga-lobby-table-item__bg {
@@ -503,73 +553,75 @@ html[dir='rtl'] .bga-dropdown-button-value {
   display: none !important;
 }
 
-.bga-table-list-item__background {
-  border-top-left-radius: 24px !important;
-  border-top-right-radius: 18px !important;
-  overflow: visible !important;
-  box-shadow: none !important;
-  background: #0b72b5 !important;
+/* Table list */
+
+.bga-table-list-item {
+  &__background {
+    border-top-left-radius: 24px !important;
+    border-top-right-radius: $radius-lg !important;
+    overflow: visible !important;
+    box-shadow: none !important;
+    background: #0b72b5 !important;
+  }
+
+  &__main {
+    border-radius: $radius-lg 0 $radius-lg 0 !important;
+  }
+
+  &__progress-bar-inner {
+    background: #244587 !important;
+  }
+
+  &__players-list {
+    border-bottom-right-radius: $radius-lg !important;
+    border-bottom-left-radius: $radius-lg !important;
+    height: 50px !important;
+    padding: 0 18px !important;
+  }
 }
 
-.bga-table-list-item__main {
-  border-radius: 18px 0 18px 0 !important;
-}
-
-.bga-table-list-item__progress-bar-inner {
-  background: #244587 !important;
-}
-
-.bga-table-list-item__players-list {
-  border-bottom-right-radius: 18px !important;
-  border-bottom-left-radius: 18px !important;
-  height: 50px !important;
-  padding: 0 18px !important;
-}
+/* Misc */
 
 .rounded {
-  border-radius: 18px !important;
+  border-radius: $radius-lg !important;
 }
 
 .bga-game-panel-medias-box__icon {
-  border-top-left-radius: 12px !important;
-  border-bottom-left-radius: 12px !important;
+  border-top-left-radius: $radius-md !important;
+  border-bottom-left-radius: $radius-md !important;
 }
 
 .bga-panel-images__img:first-child {
-  border-top-right-radius: 12px !important;
-  border-top-left-radius: 12px !important;
-}
-
-.bga-page-section__content > .h-2 {
-  height: 18px !important;
+  border-top-right-radius: $radius-md !important;
+  border-top-left-radius: $radius-md !important;
 }
 
 .bga-page-section__content {
-  .bga-page-section__content--count-3 {
+  > .h-2 {
+    height: 18px !important;
+  }
+
+  &--count-3 {
     .bga-panel-images__img:nth-child(2) {
-      border-bottom-left-radius: 12px !important;
+      border-bottom-left-radius: $radius-md !important;
     }
 
     .bga-panel-images__img:last-child {
-      border-bottom-right-radius: 12px !important;
+      border-bottom-right-radius: $radius-md !important;
     }
+  }
 
-    .bga-panel-images__img:nth-child(2) {
-      border-bottom-left-radius: 12px !important;
+  &--count-1 {
+    .bga-panel-images__img:first-child {
+      border-radius: $radius-md !important;
     }
+  }
 
+  &--count-2 {
     .bga-panel-images__img:last-child {
-      border-bottom-right-radius: 12px !important;
+      border-bottom-right-radius: $radius-md !important;
+      border-bottom-left-radius: $radius-md !important;
     }
-  }
-
-  .bga-page-section__content--count-1 .bga-panel-images__img:first-child {
-    border-radius: 12px !important;
-  }
-
-  .bga-page-section__content--count-2 .bga-panel-images__img:last-child {
-    border-bottom-right-radius: 12px !important;
-    border-bottom-left-radius: 12px !important;
   }
 }
 
@@ -580,6 +632,12 @@ html[dir='rtl'] .bga-dropdown-button-value {
 #head_infomsg {
   width: clamp(200px, 25%, 100%);
 
+  > div {
+    padding: 1em;
+    border-radius: 10px;
+    max-height: unset;
+  }
+
   .head_infomsg_close {
     position: relative;
     top: -18px;
@@ -587,120 +645,129 @@ html[dir='rtl'] .bga-dropdown-button-value {
   }
 }
 
-#head_infomsg > div {
-  padding: 1em;
-  border-radius: 10px;
-  max-height: unset;
-}
-
 /* =========================================================
    GAME INTERFACE
    ========================================================= */
 
+$topbar-height: 40px;
+$bg-main: #eaeaea;
+$border-color: #ccc;
+
+/* Root */
+
 :root {
-  --bga-player-panel-background: #eaeaea;
+  --bga-player-panel-background: #{$bg-main};
 }
+
+/* Top bar */
 
 .ingame#topbar {
-  height: 40px;
+  height: $topbar-height;
   margin: 0;
   box-shadow: none;
-  background: #eaeaea;
-  border-bottom: 1px solid #ccc;
+  background: $bg-main;
+  border-bottom: 1px solid $border-color;
+
+  &.private-alpha-banner__gradient {
+    background: linear-gradient(90deg, #212121, #2a2a2a 30%, $bg-main 65%);
+  }
+
+  &.alpha-banner__gradient {
+    background: linear-gradient(90deg, #70126f, #ae22ac 30%, $bg-main 65%);
+  }
+
+  &.beta-banner__gradient {
+    background: linear-gradient(90deg, #705423, #ffbb3c 30%, $bg-main 65%);
+  }
+
+  #alpha_beta_banner {
+    .text-lg {
+      line-height: 1.2;
+      font-size: 1rem;
+    }
+  }
+
+  .alphabanner,
+  .pubbanner {
+    height: $topbar-height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .emblemstatus {
+    background-size: auto $topbar-height;
+    height: 32px;
+    background-position: 0 -8px;
+    width: 68px;
+    margin: 0 !important;
+  }
+
+  .alphabanner {
+    > div:last-child {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+
+      > br {
+        display: none;
+      }
+
+      .bgabutton_small_margin {
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+    }
+  }
+
+  #site-logo {
+    margin-left: 0;
+    margin-right: 0;
+
+    #logoicon {
+      padding: 0;
+    }
+
+    #logoiconimg {
+      width: 36px;
+      left: 2px;
+    }
+  }
+
+  #tableinfos {
+    color: #888;
+    font-size: 10px;
+  }
+
+  .alpha-beta-banner__triangle-corner {
+    background: $bg-main;
+    height: $topbar-height;
+    min-width: $topbar-height;
+    width: $topbar-height;
+  }
+
+  .alpha-beta-banner__icon {
+    height: 28px;
+  }
+
+  #inactiveplayermessage {
+    height: 36px;
+  }
 }
 
-.ingame#topbar.private-alpha-banner__gradient {
-  background: linear-gradient(90deg, #212121, #2a2a2a 30%, #eaeaea 65%);
-}
-
-.ingame#topbar.alpha-banner__gradient {
-  background: linear-gradient(90deg, #70126f, #ae22ac 30%, #eaeaea 65%);
-}
-
-.ingame#topbar.beta-banner__gradient {
-  background: linear-gradient(90deg, #705423, #ffbb3c 30%, #eaeaea 65%);
-}
-
-.ingame#topbar #alpha_beta_banner .text-lg {
-  line-height: 1.2;
-  font-size: 1rem;
-}
-
-.ingame#topbar .alphabanner,
-.ingame#topbar .pubbanner {
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-}
-
-.ingame#topbar .emblemstatus {
-  background-size: auto 40px;
-  height: 32px;
-  background-position: 0 -8px;
-  width: 68px;
-  margin: 0 !important;
-}
-
-.ingame#topbar .alphabanner > div:last-child {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.ingame#topbar .alphabanner > div:last-child > br {
-  display: none;
-}
-
-.ingame#topbar .alphabanner > div:last-child .bgabutton_small_margin {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.ingame#topbar #site-logo {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.ingame#topbar #site-logo #logoicon {
-  padding-bottom: 0;
-  padding-top: 0;
-}
-
-.ingame#topbar #site-logo #logoiconimg {
-  width: 36px;
-  left: 2px;
-}
-
-.ingame#topbar #tableinfos {
-  color: #888;
-  font-size: 10px;
-}
+/* Reflection timer */
 
 #reflexiontime_value {
   font-size: 18px;
   line-height: 1.1;
 }
 
-#topbar .alpha-beta-banner__triangle-corner {
-  background: #eaeaea;
-  height: 40px;
-  min-width: 40px;
-  width: 40px;
-}
-
-#topbar .alpha-beta-banner__icon {
-  height: 28px;
-}
-
-#topbar #inactiveplayermessage {
-  height: 36px;
-}
+/* Ingame menu */
 
 #ingame_menu_content {
-  top: 40px;
-  background: #eaeaea;
+  top: $topbar-height;
+  background: $bg-main;
   border-top: none;
   border-radius: 0 0 18px 18px;
   box-shadow: none;
@@ -713,57 +780,63 @@ html[dir='rtl'] .bga-dropdown-button-value {
   display: flex !important;
   align-items: center;
   gap: 0.8em;
+
+  .icon64 {
+    zoom: 0.5;
+    margin-top: 2px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 15px;
+  }
 }
 
-.ingame_menu_item .icon64 {
-  zoom: 0.5;
-  margin-top: 2px;
-}
-
-.ingame_menu_item p {
-  margin-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 15px;
-}
+/* Layout */
 
 #page-content {
   min-height: 100dvh;
 }
 
-#leftright_page_wrapper:not(.bgagame-agricola, .bgagame-caverna) #left-side-wrapper {
-  margin-top: 0;
-}
+#leftright_page_wrapper {
+  &:not(.bgagame-agricola, .bgagame-caverna) {
+    #left-side-wrapper {
+      margin-top: 0;
+    }
+  }
 
-#leftright_page_wrapper #left-side {
-  margin-left: 0;
-}
+  #left-side {
+    margin-left: 0;
+  }
 
-#leftright_page_wrapper #page-title {
-  background-color: #eaeaea;
-  box-shadow: none;
-  font-size: 100%;
-  line-height: 1.8;
-  border-radius: 0 0 18px 0;
-  margin-right: 12px;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  min-height: 0 !important;
+  #page-title {
+    background-color: $bg-main;
+    box-shadow: none;
+    font-size: 100%;
+    line-height: 1.8;
+    border-radius: 0 0 18px 0;
+    margin-right: 12px;
+    border-right: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    min-height: 0 !important;
+
+    .bgabutton,
+    .action-button {
+      border-radius: 12px;
+      text-shadow: none;
+      margin-bottom: 0;
+    }
+  }
 }
 
 #maintitlebar_content {
   min-height: 0;
 }
 
+/* Misc */
+
 #not_playing_help {
   display: none !important;
-}
-
-#leftright_page_wrapper #page-title .bgabutton,
-#leftright_page_wrapper #page-title .action-button {
-  border-radius: 12px;
-  text-shadow: none;
-  margin-bottom: 0;
 }
 
 #go_to_next_table_active_player,
@@ -780,45 +853,44 @@ html[dir='rtl'] .bga-dropdown-button-value {
    --------------------------------------------------------- */
 
 .bgagame-greatwesterntrail {
-  /* Convert white/grey UI elements to purple */
-  .gwt-to-purple #logs [style*='color:#7b7b7b;'],
-  .gwt-to-purple #page-title [style*='color:#7b7b7b;'],
-  .gwt-to-purple .gwt-sprite-cowboy-white,
-  .gwt-to-purple .gwt-sprite-train-white,
-  .gwt-to-purple .gwt-sprite-white-branchlet,
-  .gwt-to-purple .player-area [style*='color: #7b7b7b'],
-  .gwt-to-purple .player-board [style*='color: #7b7b7b'],
-  .gwt-to-purple .white-cube,
-  .gwt-to-purple .white-disc {
-    filter: sepia(100%) hue-rotate(215deg) brightness(0.8) saturate(7);
-  }
+  .gwt-to-purple {
+    #logs [style*='color:#7b7b7b;'],
+    #page-title [style*='color:#7b7b7b;'],
+    .gwt-sprite-cowboy-white,
+    .gwt-sprite-train-white,
+    .gwt-sprite-white-branchlet,
+    .player-area [style*='color: #7b7b7b'],
+    .player-board [style*='color: #7b7b7b'],
+    .white-cube,
+    .white-disc {
+      filter: sepia(100%) hue-rotate(215deg) brightness(0.8) saturate(7);
+    }
 
-  /* Headings */
-  .gwt-to-purple #gwt_deck_info.white h2,
-  .player-area.white h2 {
-    text-shadow:
-      1px 1px 3px #f2b4f2,
-      0 1px 3px #a1a1a1,
-      -1px 0 3px #a1a1a1,
-      0 -1px 3px #a1a1a1;
-  }
+    #gwt_deck_info.white h2,
+    .white h2 {
+      color: #f2b4f2;
+      text-shadow:
+        1px 1px 3px #f2b4f2,
+        0 1px 3px #a1a1a1,
+        -1px 0 3px #a1a1a1,
+        0 -1px 3px #a1a1a1;
+    }
 
-  .gwt-to-purple .white h2 {
-    color: #f2b4f2;
-  }
+    .location.building-tile[data-background='forest'] {
+      .builded[data-class^='white']::before {
+        background-color: #f2b4f2ad;
+      }
+    }
 
-  /* Building tiles */
-  .gwt-to-purple .location.building-tile[data-background='forest'] .builded[data-class^='white']::before {
-    background-color: #f2b4f2ad;
-  }
+    .builded[class*=' white-']::after {
+      border: 6px solid #df90df;
+    }
 
-  /* Borders */
-  .gwt-to-purple .builded[class*=' white-']::after {
-    border: 6px solid #df90df;
-  }
-
-  .gwt-to-purple #logs .builded-normal[class*=' white-']::after {
-    border: 3px solid #df90df;
+    #logs {
+      .builded-normal[class*=' white-']::after {
+        border: 3px solid #df90df;
+      }
+    }
   }
 }
 
@@ -827,21 +899,20 @@ html[dir='rtl'] .bga-dropdown-button-value {
    --------------------------------------------------------- */
 
 .bgagame-riverofgold {
-  /* Main layout */
   #rog_main_zone {
     flex-direction: column;
   }
 
-  /* Rotate river board */
   #rog_resizable_river_board {
     transform-origin: top left;
     transform: rotate(-90deg) translate(-100%, 0);
     height: calc(var(--rog_board_display_scale) * 2726px) !important;
   }
 
-  /* Ensure deliveries don’t overflow */
-  #rog_players_deliveries .rog_player_delivered_resizable {
-    max-width: 100% !important;
+  #rog_players_deliveries {
+    .rog_player_delivered_resizable {
+      max-width: 100% !important;
+    }
   }
 }
 
@@ -905,12 +976,14 @@ html[dir='rtl'] .bga-dropdown-button-value {
     width: 250px;
   }
 
-  &#leftright_page_wrapper #page-title {
-    background-color: #eae9e3;
-    border-radius: 0;
-    border-right: none;
-    border-bottom: none;
-    margin-right: 50px;
+  &#leftright_page_wrapper {
+    #page-title {
+      background-color: #eae9e3;
+      border-radius: 0;
+      border-right: none;
+      border-bottom: none;
+      margin-right: 50px;
+    }
   }
 
   .timeToThink {
@@ -928,119 +1001,150 @@ html[dir='rtl'] .bga-dropdown-button-value {
    --------------------------------------------------------- */
 
 .bgagame-agricola {
-  &#leftright_page_wrapper #page-title {
-    background-color: #f2edc8;
-    border-radius: 0;
-    border-right: none;
-    border-bottom: none;
-    margin-right: 50px;
+  &#leftright_page_wrapper {
+    #page-title {
+      background-color: #f2edc8;
+      border-radius: 0;
+      border-right: none;
+      border-bottom: none;
+      margin-right: 50px;
+    }
   }
 
-  #right-side .player-resource {
-    flex: 0 0 calc(25% - 0.3em) !important;
-    height: 25px;
-    display: flex;
-    margin: 0;
-  }
+  #right-side {
+    /* Resources */
 
-  #right-side .player-resource > span {
-    flex: 1 1 100%;
-    line-height: 1.5;
-  }
+    .player-resource {
+      flex: 0 0 calc(25% - 0.3em) !important;
+      height: 25px;
+      display: flex;
+      margin: 0;
 
-  #right-side .player-panel-personal-resources .player-resource > span,
-  #right-side .player-panel-resources .resource-food > span {
-    line-height: 1.3;
-  }
+      > span {
+        flex: 1 1 100%;
+        line-height: 1.5;
+      }
+    }
 
-  #right-side :is(.player-panel-resources, .player-panel-board-resources, .player-panel-personal-resources) {
-    row-gap: 0.4em;
-  }
+    .player-panel-personal-resources .player-resource > span,
+    .player-panel-resources .resource-food > span {
+      line-height: 1.3;
+    }
 
-  #right-side
+    :is(.player-panel-resources, .player-panel-board-resources, .player-panel-personal-resources) {
+      row-gap: 0.4em;
+    }
+
+    /* Meeples */
+
     :is(.player-panel-resources, .player-panel-board-resources, .player-panel-personal-resources)
-    :not(.resource-begging, .resource-farmer)
-    .meeple-container,
-  #right-side .player-panel-personal-resources .resource-farmer .meeple-container {
-    background: white;
-    border-radius: 30px;
-    height: 100%;
-    aspect-ratio: 1;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+      :not(.resource-begging, .resource-farmer)
+      .meeple-container,
+    .player-panel-personal-resources .resource-farmer .meeple-container {
+      background: white;
+      border-radius: 30px;
+      height: 100%;
+      aspect-ratio: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .player-panel-board-resources {
+      .resource-farmer {
+        justify-content: center;
+      }
+
+      .resource-sheep .meeple-container {
+        background: #aa947c;
+      }
+
+      .resource-pig .meeple-container {
+        background: #949494;
+      }
+
+      .resource-cattle .meeple-container {
+        background: #a78465;
+      }
+    }
+
+    .player-panel-personal-resources {
+      .meeple-container {
+        background: rgba(0, 0, 0, 0.2) !important;
+
+        > div {
+          zoom: 0.8;
+        }
+      }
+    }
+
+    .player-panel-resources {
+      .resource-wood .meeple-container {
+        background: #aa9856;
+      }
+
+      .resource-clay .meeple-container {
+        background: #b3906b;
+      }
+
+      .resource-stone .meeple-container {
+        background: #969696;
+      }
+
+      .resource-reed .meeple-container {
+        background: #b6b0be;
+      }
+
+      .resource-grain .meeple-container {
+        background: #b0a856;
+      }
+
+      .resource-vegetable .meeple-container {
+        background: #be9a54;
+      }
+
+      .resource-food .meeple-container {
+        background: #b0ac67;
+      }
+    }
   }
 
-  #right-side .player-panel-board-resources .resource-farmer {
-    justify-content: center;
-  }
-
-  #right-side .player-panel-personal-resources .meeple-container {
-    background: rgba(0, 0, 0, 0.2) !important;
-  }
-
-  #right-side .player-panel-personal-resources .meeple-container > div {
-    zoom: 0.8;
-  }
-
-  #right-side .player-panel-board-resources .resource-sheep .meeple-container {
-    background: #aa947c;
-  }
-
-  #right-side .player-panel-board-resources .resource-pig .meeple-container {
-    background: #949494;
-  }
-
-  #right-side .player-panel-board-resources .resource-cattle .meeple-container {
-    background: #a78465;
-  }
-
-  #right-side .player-panel-resources .resource-wood .meeple-container {
-    background: #aa9856;
-  }
-  #right-side .player-panel-resources .resource-clay .meeple-container {
-    background: #b3906b;
-  }
-  #right-side .player-panel-resources .resource-stone .meeple-container {
-    background: #969696;
-  }
-  #right-side .player-panel-resources .resource-reed .meeple-container {
-    background: #b6b0be;
-  }
-  #right-side .player-panel-resources .resource-grain .meeple-container {
-    background: #b0a856;
-  }
-  #right-side .player-panel-resources .resource-vegetable .meeple-container {
-    background: #be9a54;
-  }
-  #right-side .player-panel-resources .resource-food .meeple-container {
-    background: #b0ac67;
-  }
+  /* Timer */
 
   .timeToThink {
     right: 6px;
     top: 22px;
   }
 
-  .player-board-holder .player-card {
-    --agricolaCardHeight: 200px;
-  }
+  /* Cards */
 
-  .player-board-holder .player-card .player-card-resizable .player-card-inner .card-desc {
-    padding: 0 0.4em;
+  .player-board-holder {
+    .player-card {
+      --agricolaCardHeight: 200px;
+
+      .player-card-resizable {
+        .player-card-inner {
+          .card-desc {
+            padding: 0 0.4em;
+          }
+        }
+      }
+    }
   }
 
   .player-card.mini {
     height: var(--agricolaCardHeight);
-  }
 
-  .player-card.mini .player-card-resizable .player-card-inner {
-    height: calc(var(--agricolaCardHeight) / var(--agricolaCardScale));
-  }
+    .player-card-resizable {
+      .player-card-inner {
+        height: calc(var(--agricolaCardHeight) / var(--agricolaCardScale));
 
-  .player-card.mini .player-card-resizable .player-card-inner .card-desc {
-    bottom: 8.225px;
-    top: 211.5px;
+        .card-desc {
+          bottom: 8.225px;
+          top: 211.5px;
+        }
+      }
+    }
   }
 
   .player-board-holder
@@ -1052,23 +1156,35 @@ html[dir='rtl'] .bga-dropdown-button-value {
     height: 100%;
   }
 
-  .player-board-wrapper .player-board-holder .cards-wrapper {
-    gap: 8px;
+  .player-board-wrapper {
+    .player-board-holder {
+      .cards-wrapper {
+        gap: 8px;
+      }
+    }
   }
+
+  /* Hand */
 
   #hand-container {
     justify-content: flex-start;
     gap: 16px;
+
+    .player-card {
+      margin: 0;
+    }
   }
 
-  #hand-container .player-card {
-    margin: 0;
-  }
-
-  #player-boards.player-boards-right #player-boards-left-column #hand-container {
-    padding: 16px;
+  #player-boards.player-boards-right {
+    #player-boards-left-column {
+      #hand-container {
+        padding: 16px;
+      }
+    }
   }
 }
+
+/* Font override */
 
 .disable-dominican {
   --agricola-font-family: 'Fira Sans Condensed';
@@ -1078,123 +1194,123 @@ html[dir='rtl'] .bga-dropdown-button-value {
    Isle of Cats (+ Duel)
    --------------------------------------------------------- */
 
+/* Shared (Cats + Duel) */
+
 :is(.bgagame-theisleofcatsduel, .bgagame-theisleofcats) {
   .tioc-player-panel-boat-container {
     .tioc-grid {
       border: none !important;
       height: 7px !important;
       width: 7px !important;
-    }
 
-    .tioc-grid[data-valid-grid='true'] {
-      background-color: rgba(255, 255, 255, 0.15) !important;
-    }
+      &[data-valid-grid='true'] {
+        background-color: rgba(255, 255, 255, 0.15) !important;
+      }
 
-    .tioc-grid.blue {
-      background-color: #54e2ff !important;
-    }
-
-    .tioc-grid.green {
-      background-color: #36ff7c !important;
-    }
-
-    .tioc-grid.orange {
-      background-color: #ffc935 !important;
-    }
-
-    .tioc-grid.purple {
-      background-color: #d66dff !important;
-    }
-
-    .tioc-grid.red {
-      background-color: #ff6070 !important;
-    }
-
-    .tioc-grid.colorless {
-      background-color: #d3d3d3 !important;
+      &.blue {
+        background-color: #54e2ff !important;
+      }
+      &.green {
+        background-color: #36ff7c !important;
+      }
+      &.orange {
+        background-color: #ffc935 !important;
+      }
+      &.purple {
+        background-color: #d66dff !important;
+      }
+      &.red {
+        background-color: #ff6070 !important;
+      }
+      &.colorless {
+        background-color: #d3d3d3 !important;
+      }
     }
   }
 }
+
+/* Base game overrides */
 
 .bgagame-theisleofcats {
   .tioc-player-panel-boat-container {
     .tioc-grid {
       height: 6px !important;
       width: 6px !important;
-    }
 
-    .tioc-grid[data-valid-grid='true'] {
-      background-color: rgba(0, 0, 0, 0.05) !important;
-    }
+      &[data-valid-grid='true'] {
+        background-color: rgba(0, 0, 0, 0.05) !important;
+      }
 
-    .tioc-grid.blue {
-      background-color: #0089da !important;
-    }
-
-    .tioc-grid.green {
-      background-color: #0bc600 !important;
-    }
-
-    .tioc-grid.orange {
-      background-color: #e3aa0d !important;
-    }
-
-    .tioc-grid.purple {
-      background-color: #ab00ee !important;
-    }
-
-    .tioc-grid.red {
-      background-color: #ff3347 !important;
-    }
-
-    .tioc-grid.colorless {
-      background-color: #a8a9b3 !important;
+      &.blue {
+        background-color: #0089da !important;
+      }
+      &.green {
+        background-color: #0bc600 !important;
+      }
+      &.orange {
+        background-color: #e3aa0d !important;
+      }
+      &.purple {
+        background-color: #ab00ee !important;
+      }
+      &.red {
+        background-color: #ff3347 !important;
+      }
+      &.colorless {
+        background-color: #a8a9b3 !important;
+      }
     }
   }
 
-  .tioc-grid-overlay.empty {
-    background-color: rgb(0 0 0 / 40%);
-    opacity: 1;
+  /* Overlay */
+
+  .tioc-grid-overlay {
+    &.empty {
+      background-color: rgb(0 0 0 / 40%);
+      opacity: 1;
+
+      &:has(.moon-top) {
+        background-color: rgb(113 104 255 / 40%);
+      }
+
+      &:has(.moon-bottom) {
+        background-color: rgb(113 251 118 / 40%);
+      }
+
+      &:has(.parrot-back) {
+        background-color: rgb(226 210 33 / 40%);
+      }
+
+      &:has(.parrot-front) {
+        background-color: rgb(209 56 220 / 40%);
+      }
+
+      &:has(.apple) {
+        background-color: rgb(149 149 149 / 40%);
+      }
+
+      &:has(.corn) {
+        background-color: rgb(238 156 80 / 40%);
+      }
+    }
+
+    &.tioc-hidden {
+      display: block !important;
+    }
+
+    .map-icon {
+      filter: drop-shadow(0 0 5px black);
+    }
+
+    .room-icon {
+      display: none;
+    }
   }
 
-  .tioc-grid-overlay.tioc-hidden {
-    display: block !important;
-  }
-
-  .tioc-grid-overlay.empty:has(.moon-top) {
-    background-color: rgb(113 104 255 / 40%);
-  }
-
-  .tioc-grid-overlay.empty:has(.moon-bottom) {
-    background-color: rgb(113 251 118 / 40%);
-  }
-
-  .tioc-grid-overlay.empty:has(.parrot-back) {
-    background-color: rgb(226 210 33 / 40%);
-  }
-
-  .tioc-grid-overlay.empty:has(.parrot-front) {
-    background-color: rgb(209 56 220 / 40%);
-  }
-
-  .tioc-grid-overlay.empty:has(.apple) {
-    background-color: rgb(149 149 149 / 40%);
-  }
-
-  .tioc-grid-overlay.empty:has(.corn) {
-    background-color: rgb(238 156 80 / 40%);
-  }
-
-  .tioc-grid-overlay .map-icon {
-    filter: drop-shadow(0 0 5px black);
-  }
-
-  .tioc-grid-overlay .room-icon {
-    display: none;
-  }
-
-  .tioc-player-boat .tioc-shape {
-    filter: none;
+  .tioc-player-boat {
+    .tioc-shape {
+      filter: none;
+    }
   }
 }
 
@@ -1215,10 +1331,10 @@ html[dir='rtl'] .bga-dropdown-button-value {
 .bgagame-seasaltpaper {
   #full-table {
     zoom: 0.85 !important;
-  }
 
-  #full-table #tables-and-center #tables {
-    align-items: flex-start;
+    #tables-and-center #tables {
+      align-items: flex-start;
+    }
   }
 }
 
@@ -1227,49 +1343,66 @@ html[dir='rtl'] .bga-dropdown-button-value {
    --------------------------------------------------------- */
 
 .bgagame-obsession {
+  /* Cards */
+
   .card {
     border-width: 1px;
+
+    /* Glow animation */
+
+    @mixin glow-overlay {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+      animation: glow 1s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+      0%,
+      100% {
+        box-shadow: inset 0 0 calc(9px * var(--scale-factor)) rgba(0, 255, 255, 0.5);
+      }
+
+      50% {
+        box-shadow: inset 0 0 calc(18px * var(--scale-factor)) rgba(0, 255, 255, 1);
+      }
+    }
+
+    &.selectable:is(.improvement, .gentry) {
+      &::after {
+        @include glow-overlay;
+      }
+    }
+
+    &.selectable.objective::before {
+      @include glow-overlay;
+    }
+
+    &.selected:is(.improvement, .gentry)::after,
+    &.selected.objective::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+      animation: none;
+      box-shadow: inset 0 0 calc(18px * var(--scale-factor)) red;
+    }
   }
 
-  .card.selectable:is(.improvement, .gentry),
   :is(#roundBoard, #builderMarket, .family, .familyImprovement) {
     border: 1px solid black;
   }
 
-  .card.selectable:is(.improvement, .gentry)::after,
-  .card.selectable.objective::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    pointer-events: none;
-    animation: glow 1s ease-in-out infinite;
-  }
+  /* Improvements layout */
 
-  @keyframes glow {
-    0%,
-    100% {
-      box-shadow: inset 0 0 calc(9px * var(--scale-factor)) rgba(0, 255, 255, 0.5);
+  .improvementSpot {
+    div.improvement:nth-child(2) {
+      left: 6px;
+      top: 6px;
     }
-    50% {
-      box-shadow: inset 0 0 calc(18px * var(--scale-factor)) rgba(0, 255, 255, 1);
-    }
-  }
-
-  .card.selected:is(.improvement, .gentry)::after,
-  .card.selected.objective::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    pointer-events: none;
-    animation: none;
-    box-shadow: inset 0 0 calc(18px * var(--scale-factor)) red;
-  }
-
-  .improvementSpot div.improvement:nth-child(2) {
-    left: 6px;
-    top: 6px;
   }
 
   .familyImprovement {
@@ -1278,133 +1411,69 @@ html[dir='rtl'] .bga-dropdown-button-value {
     margin-bottom: -1px;
   }
 
-  .playerMatImprovementColumn:nth-of-type(2) {
-    left: calc(145px * var(--scale-factor) - 1px) !important;
+  /* Column positioning */
+
+  @for $i from 2 through 5 {
+    .playerMatImprovementColumn:nth-of-type(#{$i}) {
+      left: calc(145px * var(--scale-factor) * (#{$i - 1}) - (#{$i - 1}px)) !important;
+    }
   }
 
-  .playerMatImprovementColumn:nth-of-type(3) {
-    left: calc(145px * var(--scale-factor) * 2 - 2px) !important;
+  /* Stacking offsets (this was the ugly part before) */
+
+  @for $i from 2 through 20 {
+    .playerMatImprovementColumn .improvement:nth-of-type(#{$i}) {
+      margin-top: -#{$i - 1}px;
+    }
   }
 
-  .playerMatImprovementColumn:nth-of-type(4) {
-    left: calc(145px * var(--scale-factor) * 3 - 3px) !important;
+  /* Minor adjustments */
+
+  .playerMatImprovementColumn {
+    .improvement:nth-of-type(2) {
+      margin-top: -1px;
+    }
   }
 
-  .playerMatImprovementColumn:nth-of-type(5) {
-    left: calc(145px * var(--scale-factor) * 4 - 4px) !important;
-  }
+  /* Player area */
 
-  .playerMatImprovementColumn .improvement:nth-of-type(2) {
-    margin-top: -1px;
-  }
+  div[id^='playerArea'] {
+    > div {
+      border: none !important;
 
-  .playerMatImprovementColumn .improvement:nth-of-type(3) {
-    margin-top: -2px;
-  }
+      &:nth-of-type(2) {
+        justify-content: space-between;
+      }
 
-  .playerMatImprovementColumn .improvement:nth-of-type(4) {
-    margin-top: -3px;
-  }
+      &:nth-of-type(3) {
+        border-radius: 12px;
+        overflow: hidden;
 
-  .playerMatImprovementColumn .improvement:nth-of-type(5) {
-    margin-top: -4px;
-  }
+        .cardTab {
+          border-width: 1px !important;
+          border-radius: 6px;
 
-  .playerMatImprovementColumn .improvement:nth-of-type(6) {
-    margin-top: -5px;
-  }
+          &.active {
+            color: #6a6486;
+            background-color: white;
+          }
+        }
 
-  .playerMatImprovementColumn .improvement:nth-of-type(7) {
-    margin-top: -6px;
-  }
+        > div:nth-of-type(1) {
+          border-bottom: none !important;
+        }
 
-  .playerMatImprovementColumn .improvement:nth-of-type(8) {
-    margin-top: -7px;
-  }
+        > div:nth-of-type(2) {
+          background: linear-gradient(180deg, #483370, rgb(from #483370 r g b / 0.6)) !important;
+        }
 
-  .playerMatImprovementColumn .improvement:nth-of-type(9) {
-    margin-top: -8px;
-  }
-
-  .playerMatImprovementColumn .improvement:nth-of-type(10) {
-    margin-top: -9px;
-  }
-
-  .playerMatImprovementColumn .improvement:nth-of-type(11) {
-    margin-top: -10px;
-  }
-
-  .playerMatImprovementColumn .improvement:nth-of-type(12) {
-    margin-top: -11px;
-  }
-
-  .playerMatImprovementColumn .improvement:nth-of-type(13) {
-    margin-top: -12px;
-  }
-
-  .playerMatImprovementColumn .improvement:nth-of-type(14) {
-    margin-top: -13px;
-  }
-
-  .playerMatImprovementColumn .improvement:nth-of-type(15) {
-    margin-top: -14px;
-  }
-
-  .playerMatImprovementColumn .improvement:nth-of-type(16) {
-    margin-top: -15px;
-  }
-
-  .playerMatImprovementColumn .improvement:nth-of-type(17) {
-    margin-top: -16px;
-  }
-
-  .playerMatImprovementColumn .improvement:nth-of-type(18) {
-    margin-top: -17px;
-  }
-
-  .playerMatImprovementColumn .improvement:nth-of-type(19) {
-    margin-top: -18px;
-  }
-
-  .playerMatImprovementColumn .improvement:nth-of-type(20) {
-    margin-top: -19px;
-  }
-
-  div[id^='playerArea'] > div {
-    border: none !important;
-  }
-
-  div[id^='playerArea'] > div:nth-of-type(2) {
-    justify-content: space-between;
-  }
-
-  div[id^='playerArea'] > div:nth-of-type(3) {
-    border-radius: 12px;
-    overflow: hidden;
-  }
-
-  div[id^='playerArea'] > div:nth-of-type(3) .cardTab {
-    border-width: 1px !important;
-    border-radius: 6px;
-  }
-
-  div[id^='playerArea'] > div:nth-of-type(3) .cardTab.active {
-    color: #6a6486;
-    background-color: white;
-  }
-
-  div[id^='playerArea'] > div:nth-of-type(3) > div:nth-of-type(1) {
-    border-bottom: none !important;
-  }
-
-  div[id^='playerArea'] > div:nth-of-type(3) > div:nth-of-type(2) {
-    background: linear-gradient(180deg, #483370, rgb(from #483370 r g b / 0.6)) !important;
-  }
-
-  div[id^='playerArea'] > div:nth-of-type(3) > div:nth-of-type(3) {
-    filter: opacity(0.6) !important;
-    background: linear-gradient(180deg, #483370, rgba(255, 255, 255, 0.5)) !important;
-    padding: 8px 8px 0 8px !important;
+        > div:nth-of-type(3) {
+          filter: opacity(0.6) !important;
+          background: linear-gradient(180deg, #483370, rgba(255, 255, 255, 0.5)) !important;
+          padding: 8px 8px 0 8px !important;
+        }
+      }
+    }
   }
 }
 
@@ -1423,34 +1492,52 @@ html[dir='rtl'] .bga-dropdown-button-value {
    --------------------------------------------------------- */
 
 .ffo-pref-single-view {
-  .bgagame-feastforodin #ffo-player-boards-holders {
-    text-align: inherit;
-    align-items: flex-start;
-  }
+  .bgagame-feastforodin {
+    #ffo-player-boards-holders {
+      text-align: inherit;
+      align-items: flex-start;
 
-  .bgagame-feastforodin #ffo-player-boards-holders .ffo-player-boards-holder {
-    flex: 1 1 100%;
+      .ffo-player-boards-holder {
+        flex: 1 1 100%;
+      }
+    }
   }
 }
 
 .bgagame-feastforodin {
-  .ffo-player-board-main .ffo-player-name {
-    min-width: 300px;
-    display: flex;
-    justify-content: space-between;
-    line-height: 1;
-    padding: 0.3em;
-    border-radius: 50px;
-    top: 0.2em;
-    left: 50px !important;
+  /* Player board */
+
+  .ffo-player-board-main {
+    .ffo-player-name {
+      min-width: 300px;
+      display: flex;
+      justify-content: space-between;
+      line-height: 1;
+      padding: 0.3em;
+      border-radius: 50px;
+      top: 0.2em;
+      left: 50px !important;
+    }
   }
 
-  #feast-for-odin #ffo-action-board-holder .ffo-action .ffo-icon-meeple:not(:first-child) {
-    margin-left: calc(-1px - (32px * 4 - 100%) / 3);
+  /* Meeple spacing */
+
+  #feast-for-odin {
+    #ffo-action-board-holder {
+      .ffo-action {
+        .ffo-icon-meeple:not(:first-child) {
+          margin-left: calc(-1px - (32px * 4 - 100%) / 3);
+        }
+      }
+    }
   }
 
-  .cp_board .ffo-meeple-row .ffo-icon-meeple:not(:first-child) {
-    margin-left: calc(-1px - (32px * 12 - 100%) / 11);
+  .cp_board {
+    .ffo-meeple-row {
+      .ffo-icon-meeple:not(:first-child) {
+        margin-left: calc(-1px - (32px * 12 - 100%) / 11);
+      }
+    }
   }
 }
 
@@ -1459,19 +1546,19 @@ html[dir='rtl'] .bga-dropdown-button-value {
    --------------------------------------------------------- */
 
 .bgagame-barrage {
-  #floating-energy-track-container.open ~ #game_play_area {
-    padding-bottom: calc(var(--barrageEnergyTrackScale) * 170px);
-    padding-top: 0;
-  }
-
   #floating-energy-track-container {
     height: calc(var(--barrageEnergyTrackScale) * 150px);
     top: unset;
     bottom: 0;
-  }
 
-  #floating-energy-track-container #energy-track-btn {
-    display: none;
+    #energy-track-btn {
+      display: none;
+    }
+
+    &.open ~ #game_play_area {
+      padding-bottom: calc(var(--barrageEnergyTrackScale) * 170px);
+      padding-top: 0;
+    }
   }
 }
 
@@ -1492,10 +1579,8 @@ html[dir='rtl'] .bga-dropdown-button-value {
    --------------------------------------------------------- */
 
 html.cob_2019Ed {
-  background: url('https://i.postimg.cc/wjyzcQct/background.webp');
-  background-repeat: no-repeat;
+  background: url('https://i.postimg.cc/wjyzcQct/background.webp') no-repeat fixed;
   background-size: cover;
-  background-attachment: fixed;
 
   #game_play_area {
     margin-top: 12px;
@@ -1510,35 +1595,49 @@ html.cob_2019Ed {
     filter: drop-shadow(2px 1px 1px rgba(0, 0, 0, 0.5));
   }
 
-  &.lightEstBg .bgagame-castlesofburgundy {
-    .estBg {
-      opacity: 1;
-    }
+  &.lightEstBg {
+    .bgagame-castlesofburgundy {
+      .estBg {
+        opacity: 1;
+      }
 
-    .estSpaceBg {
-      filter: brightness(0.4) contrast(1);
+      .estSpaceBg {
+        filter: brightness(0.4) contrast(1);
+      }
     }
   }
 
+  /* Bonus tiles */
+
   #ebd-body {
-    .bgagame-castlesofburgundy .bonus_tile {
-      filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.6));
+    .bgagame-castlesofburgundy {
+      .bonus_tile {
+        filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.6));
+      }
     }
 
-    &.cob_2p .bgagame-castlesofburgundy .bonus_tile {
-      background-image: url('https://i.postimg.cc/ZnrhDcMD/bonus-Tiles-2019-2p.png');
+    &.cob_2p {
+      .bgagame-castlesofburgundy .bonus_tile {
+        background-image: url('https://i.postimg.cc/ZnrhDcMD/bonus-Tiles-2019-2p.png');
+      }
     }
 
-    &.cob_3p .bgagame-castlesofburgundy .bonus_tile {
-      background-image: url('https://i.postimg.cc/HnQCP2hR/bonus-Tiles-2019-3p.png');
+    &.cob_3p {
+      .bgagame-castlesofburgundy .bonus_tile {
+        background-image: url('https://i.postimg.cc/HnQCP2hR/bonus-Tiles-2019-3p.png');
+      }
     }
 
-    &y.cob_4p .bgagame-castlesofburgundy .bonus_tile {
-      background-image: url('https://i.postimg.cc/T1rXH9s8/bonus-Tiles-2019-4p.png');
+    &.cob_4p {
+      .bgagame-castlesofburgundy .bonus_tile {
+        background-image: url('https://i.postimg.cc/T1rXH9s8/bonus-Tiles-2019-4p.png');
+      }
     }
   }
 
   .bgagame-castlesofburgundy {
+    /* Background assets */
+
     .estSpaceBg {
       background-image: url('https://i.postimg.cc/T3b1gzBs/space-background.png');
     }
@@ -1548,8 +1647,20 @@ html.cob_2019Ed {
       filter: brightness(0.7);
     }
 
+    .mbSpaceBg {
+      background-image: url('https://i.postimg.cc/j5Nw86qh/space-mb-bg.png');
+    }
+
     .cob_die {
       background-image: url('https://i.postimg.cc/1zf84gs0/dice.png');
+
+      &.cob_available {
+        left: 68.5%;
+      }
+
+      &.cob_used {
+        filter: brightness(0.6) contrast(75%);
+      }
     }
 
     .cob_player_board {
@@ -1565,6 +1676,13 @@ html.cob_2019Ed {
       background-image: url('https://i.postimg.cc/MHmLYvX4/counters.webp');
     }
 
+    .cob_disc {
+      background-image: url('https://i.postimg.cc/rwSmWym6/discs.png');
+      left: 0 !important;
+    }
+
+    /* Layout tweaks */
+
     .estate {
       top: 19%;
     }
@@ -1573,33 +1691,48 @@ html.cob_2019Ed {
       top: 84.85%;
     }
 
-    .estSpBorders,
-    .ah_onBoard {
-      display: none;
-    }
-
     .goods_storage_ctnr {
       top: 2.4%;
-    }
-
-    .cob_die.cob_available {
-      left: 68.5%;
-    }
-
-    .cob_die.cob_used {
-      filter: brightness(0.6) contrast(75%);
     }
 
     .die1 {
       top: 1.3%;
     }
-
     .die2 {
       top: 9.35%;
     }
 
     .plBdNumber {
       top: 71%;
+    }
+
+    .estSpBorders,
+    .ah_onBoard {
+      display: none;
+    }
+
+    /* Player board */
+
+    #main_board,
+    .cob_player_block {
+      border-radius: 18px;
+      box-shadow: 5px 5px 5px #0000005c;
+    }
+
+    .cob_player_block {
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+
+      > h3 {
+        position: absolute;
+        z-index: 1;
+        right: 6px;
+        top: 6px;
+        writing-mode: vertical-lr;
+        color: #efeeb1 !important;
+        font-weight: 400;
+      }
     }
 
     .plBoardCounters_ctnr {
@@ -1615,54 +1748,21 @@ html.cob_2019Ed {
       }
     }
 
-    #main_board,
-    .cob_player_block {
-      border-radius: 18px;
-      box-shadow: 5px 5px 5px #0000005c;
-    }
+    /* Main board */
 
-    .cob_player_block {
-      padding: 0;
-      position: relative;
-      overflow: hidden;
-      border-radius: 18px;
-    }
-
-    .cob_player_block > h3 {
-      position: absolute;
-      z-index: 1;
-      right: 6px;
-      top: 6px;
-      writing-mode: vertical-lr;
-      color: #efeeb1 !important;
-      font-weight: 400;
-    }
-
-    .mbSpaceBg {
-      background-image: url('https://i.postimg.cc/j5Nw86qh/space-mb-bg.png');
-    }
-
-    .cob_disc {
-      background-image: url('https://i.postimg.cc/rwSmWym6/discs.png');
-      left: 0 !important;
+    #main_board {
+      background-image: url('https://i.postimg.cc/J4jc8gwx/main-Board.webp');
     }
 
     #help_mboard_ctnr {
       width: 33.2%;
       height: 20%;
       top: 78%;
-    }
-
-    #main_board {
-      background-image: url('https://i.postimg.cc/J4jc8gwx/main-Board.webp');
+      left: 0.4%;
     }
 
     #help_mboard_title {
       color: #e3c697;
-    }
-
-    #help_mboard_ctnr {
-      left: 0.4%;
     }
   }
 }
@@ -1671,11 +1771,15 @@ html.cob_2019Ed {
    Gaia Project
    --------------------------------------------------------- */
 
-html:has(.bgagame-gaiaproject) {
-  animation: mapGlow 5s infinite alternate;
+html {
+  &:has(.bgagame-gaiaproject) {
+    animation: mapGlow 5s infinite alternate;
+  }
 }
 
 .bgagame-gaiaproject {
+  /* Containers */
+
   :is(#gpj-tabContent, #gpj-map-container) {
     background: none !important;
   }
@@ -1687,6 +1791,8 @@ html:has(.bgagame-gaiaproject) {
   #gpj-tabs {
     gap: 4px;
   }
+
+  /* Tabs */
 
   .gpj-tab {
     border-radius: 10px;
@@ -1704,9 +1810,13 @@ html:has(.bgagame-gaiaproject) {
     }
   }
 
-  #gpj-selectedFactionContainer #gpj-selectedFactionDesc {
-    margin: 0 auto;
-    width: 523px;
-    color: #ffffffcc;
+  /* Faction panel */
+
+  #gpj-selectedFactionContainer {
+    #gpj-selectedFactionDesc {
+      margin: 0 auto;
+      width: 523px;
+      color: #ffffffcc;
+    }
   }
 }
