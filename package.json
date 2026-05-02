@@ -1,0 +1,25 @@
+{
+  "name": "custom-bga",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:watch": "sass --watch custom.scss:custom.css --style=compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GiulianoReinhart/custom-bga.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/GiulianoReinhart/custom-bga/issues"
+  },
+  "homepage": "https://github.com/GiulianoReinhart/custom-bga#readme",
+  "devDependencies": {
+    "sass": "^1.99.0"
+  }
+}
