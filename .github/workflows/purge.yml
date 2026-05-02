@@ -2,10 +2,21 @@ name: Purge jsDelivr cache
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   purge:
     runs-on: ubuntu-latest
+
     steps:
-      - run: curl https://purge.jsdelivr.net/gh/GiulianoReinhart/custom-bga@main
+      - name: Purge jsDelivr (entire repo)
+        run: |
+          curl -X POST "https://purge.jsdelivr.net/gh/GiulianoReinhart/custom-bga@main"
+
+      - name: Wait for propagation
+        run: sleep 5
+
+      - name: Warm cache with fresh file
+        run: |
+          curl "https://cdn.jsdelivr.net/gh/GiulianoReinhart/custom-bga@main/custom.css"
