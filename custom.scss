@@ -1,4 +1,4 @@
-// use npm run sass:watch
+// npm run sass:watch
 
 /* =========================================================
    IMPORTS
@@ -1664,7 +1664,15 @@ html.cob_2019Ed {
     }
 
     .cob_player_board {
-      background-image: url('https://i.postimg.cc/HsXRD3Mx/pl-Board.jpg');
+      // background-image: url('https://i.postimg.cc/HsXRD3Mx/pl-Board.jpg');
+      background-image: url('https://i.postimg.cc/0QvZvXff/pl-Board.webp');
+
+      .workers,
+      .silverlings {
+        &.plBoardCounters {
+          visibility: hidden;
+        }
+      }
     }
 
     .goods {
@@ -1736,15 +1744,12 @@ html.cob_2019Ed {
     }
 
     .plBoardCounters_ctnr {
-      position: absolute;
-      left: 2%;
-      top: 16.9%;
-      width: 13.85%;
-      height: 17.2%;
-      text-shadow: 2px 2px 3px #00000066;
-
       span.plBoardCounters {
-        font-size: 26px !important;
+        font-size: 100% !important;
+        display: inline-block;
+        width: 30%;
+        text-align: center;
+        color: white;
       }
     }
 
@@ -1827,7 +1832,6 @@ html {
 
 .bgagame-darwinsjourney {
   &#leftright_page_wrapper #page-title {
-    // background-color: #495970;
-    background-color: red;
+    background-color: #495970;
   }
 }
