@@ -852,20 +852,20 @@ $border-color: #ccc;
    Great Western Trail
    --------------------------------------------------------- */
 
-.bgagame-greatwesterntrail {
-  .gwt-to-purple {
-    #logs [style*='color:#7b7b7b;'],
-    #page-title [style*='color:#7b7b7b;'],
-    .gwt-sprite-cowboy-white,
-    .gwt-sprite-train-white,
-    .gwt-sprite-white-branchlet,
-    .player-area [style*='color: #7b7b7b'],
-    .player-board [style*='color: #7b7b7b'],
-    .white-cube,
-    .white-disc {
-      filter: sepia(100%) hue-rotate(215deg) brightness(0.8) saturate(7);
-    }
+.gwt-to-purple {
+  #logs [style*='color:#7b7b7b;'],
+  #page-title [style*='color:#7b7b7b;'],
+  .gwt-sprite-cowboy-white,
+  .gwt-sprite-train-white,
+  .gwt-sprite-white-branchlet,
+  .player-area [style*='color: #7b7b7b'],
+  .player-board [style*='color: #7b7b7b'],
+  .white-cube,
+  .white-disc {
+    filter: sepia(100%) hue-rotate(215deg) brightness(0.8) saturate(7);
+  }
 
+  .bgagame-greatwesterntrail {
     #gwt_deck_info.white h2,
     .white h2 {
       color: #f2b4f2;
@@ -1670,7 +1670,7 @@ html.cob_2019Ed {
       .workers,
       .silverlings {
         &.plBoardCounters {
-          visibility: hidden;
+          background: none;
         }
       }
     }
