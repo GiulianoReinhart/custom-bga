@@ -649,6 +649,127 @@ html[dir='rtl'] {
    GAME INTERFACE
    ========================================================= */
 
+/* Hide bare text nodes between the checkboxes */
+#restrictTableDialog {
+  font-size: 0;
+}
+
+/* Restore font-size for all real visible elements */
+#restrictTableDialog h3 {
+  font-size: 16px;
+}
+#restrictTableDialog select,
+#restrictTableDialog a,
+#restrictTableDialog .bgabutton {
+  font-size: 14px;
+}
+
+/* ── Segmented pill ── */
+#restrictTableDialog input.tableaccess_level {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 34px;
+  padding: 0 16px;
+  margin: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+  white-space: nowrap;
+
+  background: #f0f0f0;
+  border: 1.5px solid #bbb;
+  border-right-width: 0;
+
+  color: #555;
+  position: relative;
+  transition:
+    background 0.15s,
+    border-color 0.15s,
+    color 0.15s;
+}
+
+/* Left cap */
+#restrictTableDialog input.tableaccess_level:first-of-type {
+  border-radius: 17px 0 0 17px;
+  padding-left: 20px;
+}
+
+/* Right cap */
+#restrictTableDialog input.tableaccess_level:last-of-type {
+  border-right-width: 1.5px;
+  border-radius: 0 17px 17px 0;
+  padding-right: 20px;
+}
+
+/* Inject label text (font-size must be explicit since parent is 0) */
+#restrictTableDialog input.tableaccess_level::after {
+  font-size: 13px;
+  font-family: inherit;
+  pointer-events: none;
+}
+
+#restrictTableDialog input#tableaccess_Beginners::after {
+  content: 'Beginners';
+}
+#restrictTableDialog input#tableaccess_Apprentices::after {
+  content: 'Apprentices';
+}
+#restrictTableDialog input#tableaccess_Averageplayers::after {
+  content: 'Average players';
+}
+#restrictTableDialog input#tableaccess_Goodplayers::after {
+  content: 'Good players';
+}
+#restrictTableDialog input#tableaccess_Strongplayers::after {
+  content: 'Strong players';
+}
+#restrictTableDialog input#tableaccess_Experts::after {
+  content: 'Experts';
+}
+#restrictTableDialog input#tableaccess_Masters::after {
+  content: 'Masters';
+}
+
+/* ── Hover ── */
+#restrictTableDialog input.tableaccess_level:hover {
+  background: #e4eef9;
+  border-color: #4a88d0;
+  color: #1a4e8c;
+  z-index: 1;
+}
+
+/* Update the left border of the segment to the right of the hovered one */
+#restrictTableDialog input.tableaccess_level:hover + input.tableaccess_level {
+  border-left-color: #4a88d0;
+}
+
+/* ── Checked ── */
+#restrictTableDialog input.tableaccess_level:checked {
+  background: #3a7bd5;
+  border-color: #2260b8;
+  color: #fff;
+  z-index: 1;
+}
+
+#restrictTableDialog input.tableaccess_level:checked + input.tableaccess_level {
+  border-left-color: #2260b8;
+}
+
+/* ── Checked + hover ── */
+#restrictTableDialog input.tableaccess_level:checked:hover {
+  background: #2d6cbf;
+  border-color: #1a4f9c;
+}
+
+/* =========================================================
+   GAME INTERFACE
+   ========================================================= */
+
 $topbar-height: 40px;
 $bg-main: #eaeaea;
 $border-color: #ccc;
@@ -852,44 +973,70 @@ $border-color: #ccc;
    Great Western Trail
    --------------------------------------------------------- */
 
-.gwt-to-purple {
-  #logs [style*='color:#7b7b7b;'],
-  #page-title [style*='color:#7b7b7b;'],
-  .gwt-sprite-cowboy-white,
-  .gwt-sprite-train-white,
-  .gwt-sprite-white-branchlet,
-  .player-area [style*='color: #7b7b7b'],
-  .player-board [style*='color: #7b7b7b'],
-  .white-cube,
-  .white-disc {
-    filter: sepia(100%) hue-rotate(215deg) brightness(0.8) saturate(7);
+.bgagame-greatwesterntrail {
+  .builded {
+    background-image: url('https://i.postimg.cc/vZRCrrfc/buildings.webp');
   }
 
+  .white .player-boards {
+    background-image: url('https://i.postimg.cc/Gm06FFGp/pb-white.webp');
+  }
+
+  .ext-player-boards {
+    background-image: url('https://i.postimg.cc/52cDBBLj/player-board-ext.webp');
+  }
+
+  #gwt_deck_info[data-tab='objectives'] .gwt-card.filled[data-type='objective']:before,
+  #gwt_deck_info[data-tab='objectives'] .gwt-card[data-type='objective']:before,
+  #gwt_info_tile_box .tiled[data-vp]:before,
+  .player-area .tiles .tiled[data-vp]:before,
+  .gwt-sprite,
+  .location.building-tile[data-background='forest'] .builded:before {
+    background-image: url('https://i.postimg.cc/7ZwhB2yy/sprites.webp');
+  }
+
+  .player-move-board {
+    background-image: url('https://i.postimg.cc/K8xj9MyS/move-boards.webp');
+  }
+
+  .white-disc {
+    background-color: #f2b4f2;
+    border-bottom-color: #b182b1;
+    border-right-color: #b182b1;
+  }
+
+  #gwt_board {
+    background-image: url('https://i.postimg.cc/jxvD6f4x/board.webp');
+  }
+}
+
+.second-edition-rules {
+  #gwt_board {
+    background-image: url('https://i.postimg.cc/GLz4PDxm/board2nd.webp');
+  }
+}
+
+.second-edition {
   .bgagame-greatwesterntrail {
-    #gwt_deck_info.white h2,
-    .white h2 {
-      color: #f2b4f2;
-      text-shadow:
-        1px 1px 3px #f2b4f2,
-        0 1px 3px #a1a1a1,
-        -1px 0 3px #a1a1a1,
-        0 -1px 3px #a1a1a1;
+    .builded {
+      background-image: url('https://i.postimg.cc/Cxy9GGkh/2nd-buildings.webp');
     }
 
-    .location.building-tile[data-background='forest'] {
-      .builded[data-class^='white']::before {
-        background-color: #f2b4f2ad;
-      }
+    .white .player-boards {
+      background-image: url('https://i.postimg.cc/y8q2mmc8/2nd-pb-white.webp');
     }
 
-    .builded[class*=' white-']::after {
-      border: 6px solid #df90df;
+    #gwt_deck_info[data-tab='objectives'] .gwt-card.filled[data-type='objective']:before,
+    #gwt_deck_info[data-tab='objectives'] .gwt-card[data-type='objective']:before,
+    #gwt_info_tile_box .tiled[data-vp]:before,
+    .player-area .tiles .tiled[data-vp]:before,
+    .gwt-sprite,
+    .location.building-tile[data-background='forest'] .builded:before {
+      background-image: url('https://i.postimg.cc/NjBFNHwv/2nd-sprites.webp');
     }
 
-    #logs {
-      .builded-normal[class*=' white-']::after {
-        border: 3px solid #df90df;
-      }
+    .player-move-board {
+      background-image: url('https://i.postimg.cc/qv4qm3HP/2nd-move-boards.webp');
     }
   }
 }
@@ -1392,8 +1539,16 @@ $border-color: #ccc;
     }
   }
 
-  :is(#roundBoard, #builderMarket, .family, .familyImprovement) {
+  :is(#roundBoard, #builderMarket, #sideBoardContainer #sideBoard, .family, .familyImprovement) {
     border: 1px solid black;
+  }
+
+  #builderMarketContainer:has(+ #sideBoardContainer) #builderMarket {
+    border-right: none;
+  }
+
+  #sideBoardContainer #sideBoard {
+    border-left: none;
   }
 
   /* Improvements layout */
@@ -1834,4 +1989,12 @@ html {
   &#leftright_page_wrapper #page-title {
     background-color: #495970;
   }
+}
+
+/* ---------------------------------------------------------
+   Alchemists
+   --------------------------------------------------------- */
+
+.bgagame-alchemists #player_area {
+  justify-content: flex-start;
 }

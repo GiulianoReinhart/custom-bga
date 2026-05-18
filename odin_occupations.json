@@ -1,0 +1,1902 @@
+[
+  {
+    "id": 1,
+    "deck": "A",
+    "name": "Peddler",
+    "description": "Each time you use a “Livestock Market” action space, you receive a discount of 1 silver on the total cost of the goods. _(For instance, cattle plus milk cost you 2 instead of 3 silver.)_ You do not receive the discount on goods that are already free of cost.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 2,
+    "deck": "C",
+    "name": "Patron",
+    "description": "On each action space whose actions cost at least 2 silver, you receive a discount of 1 silver, including Emigration from round 2, buying salt meat or cattle plus milk/sheep, as well as the “Buy 2 Special Tiles” action, if applicable. _(When you buy a pair of goods, only its total cost is reduced by 1 silver. For instance, Helmet plus Belt only cost you 2 silver instead of 3. This card does not reduce the cost of ships.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 3,
+    "deck": "A",
+    "name": "Furrier",
+    "description": "Each time you use an action space providing exactly 1 silver _(among other things)_, you also receive 1 snare weapon card. This applies to eight action spaces on the game board _(4x Weekly Market, 2x Crafting, 2x Occupation)_, but does not apply to action spaces for which you receive a bonus silver via one of your occupations. Look through the discard pile _(or the draw pile, if need be)_ and take the weapon card from there.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 4,
+    "deck": "C",
+    "name": "Hunter",
+    "description": "You receive a permanent -1 on each of your dice rolls, including dice rolls for raiding and pillaging _(for which you would like to roll high)_. For instance, a rolled “1” becomes “0”. _(This card can be combined with other cards modifying dice rolls.)_",
+    "type": "each time",
+    "errata": "Applies to all die rolls, including Theft.",
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 5,
+    "deck": "A",
+    "name": "Chief",
+    "description": "The Chief is worth 7 points. For that, when you play this card, you must immediately _(and only once via this card)_ complete a Feast phase on your own. _(You will also participate in the regular Feast phase this round.)_",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 6,
+    "deck": "B",
+    "name": "Stone Carver",
+    "description": "With each stone you take from a mountain strip _(into your supply)_, you also receive 1 silver.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 7,
+    "deck": "A",
+    "name": "Miller",
+    "description": "Immediately after the Feast phase _(phase 9)_ of each round, if you have 1 or 2 grain in your supply, you receive 1 and 2 silver, respectively. _(Grain in your houses does not count.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 8,
+    "deck": "A",
+    "name": "Craft Leader",
+    "description": "Immediately before the Income phase _(phase 7)_ of each round, if you have at least 5 Vikings on Crafting action spaces, you receive 1 oil. _(How many Vikings you currently have on those spaces is independent of the number of Vikings you originally used.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 9,
+    "deck": "A",
+    "name": "Ore Boatman",
+    "description": "Immediately before the Income phase _(phase 7)_ of each round, you receive 1 ore for each longship you have, but only if you place it immediately in the placement area of your home board or exploration boards. _(The amount of ore in the longships does not matter. If you receive more than one ore, you can place them on the same or different boards.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 10,
+    "deck": "A",
+    "name": "Milker",
+    "description": "When you play this card, if you have at least 1 sheep or cattle, you immediately _(and only once via this card)_ receive 1 milk and 1 silver. If you have both, you receive 2 milk and 2 silver instead.",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 11,
+    "deck": "C",
+    "name": "Trident Hunter",
+    "description": "When you play this card, you immediately _(and only once via this card)_ receive 1 spear. Look through the discard pile _(or draw pile, if need be)_ and take the spear from there. Each time you take a “Whaling” action _(on an action space or via an occupation)_, for each spear you spend, you receive -2 instead of -1 on each of your dice rolls. _(This card can be combined with other cards modifying a dice rolls.)_",
+    "type": ["immediate", "each time"],
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 12,
+    "deck": "A",
+    "name": "Helmsman",
+    "description": "When you play this card, you immediately _(and only once via this card)_ receive 1 chest. Immediately after each time you take an action in which you use a longship, you can draw 1 weapon card from the face-down draw pile and place the weapon card face up in front of you. _(It does not matter whether you use the longship for raiding, pillaging, plundering, exploring, or emigrating. The amount of ore on the longship does not matter either. Even if you use more than one longship during that action, e.g., because another card allows you to do that, you still only receive 1 weapon card.)_",
+    "type": ["immediate", "each time"],
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 13,
+    "deck": "B",
+    "name": "Archer",
+    "description": "When you play this card, you immediately _(and only once via this card)_ receive 1 “bow and arrow” weapon card. Look through the discard pile _(or the draw pile, if need be)_ and take the weapon card from there. Each time you take a “Hunting Game” action, you receive -1 on each of your dice rolls. For instance, a rolled “1” becomes “0”. _(This card can be combined with other cards modifying dice rolls.)_",
+    "type": ["immediate", "each time"],
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 14,
+    "deck": "C",
+    "name": "Ship Owner",
+    "description": "When you play this card, if you have at least 1 whaling boat, 1 knarr, and 1 longship, you immediately _(and only once via this card)_ receive 1 whale meat. If you have at least 2 whaling boats, 2 knarrs, and 2 longships, you receive 1 additional whale meat. _(The amount of ore on the whaling boats and longships does not matter.)_",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 15,
+    "deck": "C",
+    "name": "Cottager",
+    "description": "When you play this card, you immediately _(and only once via this card)_ receive 2 mead per _(stone and long)_ house you have _(sheds do not count)_. Each time you build a stone or long house after this, you also receive 1 hide.",
+    "type": ["immediate", "each time"],
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 16,
+    "deck": "C",
+    "name": "Captain",
+    "description": "When you play this card, if your whaling boats and longships have at least 4/5/6/7 ore combined, you immediately _(and only once via this card)_ receive 2/3/4/5 silver. The preprinted ore on your whaling boats does not count.",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 17,
+    "deck": "A",
+    "name": "Orient Shipper",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ take a “⇧⇧⇧ 1 Good” action, i.e., you can exchange an orange _(or red or green)_ goods tile for a blue one of the same dimensions. _(For instance, you could exchange 1 fruits for 1 treasure chest in three steps, or 1 cattle for 1 silver hoard in just 2 steps.)_",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 18,
+    "deck": "C",
+    "name": "Fighter",
+    "description": "When you play this card, if you have at least 1 longship holding at least 2 ore, you immediately _(and only once via this card)_ receive 1 blue good. Which one you receive depends on the number of longships you have holding 2 and 3 ore: you receive 1 silk/ jewelry/silver hoard for 1/2/3 or more such longships. _(You cannot take silk instead of jewelry, and you cannot take silk or jewelry instead of silver hoard. Also, you cannot discard or simply ignore a longship to receive another reward.)_",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 19,
+    "deck": "C",
+    "name": "Host",
+    "description": "When you play this card, you immediately _(and only once via this card)_ receive a blue goods tile. Which one you receive depends on how many special tiles you have in your supply and on your boards. If you have exactly 3 special tiles, you receive 1 silk. If you have exactly 4 special tiles, you receive 1 spices. If you have at least 5 special tiles, you receive 1 jewelry. _(You cannot take silk instead of spices, and you cannot take silk or spices instead of jewelry. Also, you cannot discard a special tile to receive another reward.)_",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 20,
+    "deck": "A",
+    "name": "Builder",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ play a Bonus phase for your houses only. You will also participate in the regular Bonus phase this round.",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 21,
+    "deck": "B",
+    "name": "Collector",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ play a Bonus phase for your home board only. You will also participate in the regular Bonus phase this round.",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 22,
+    "deck": "A",
+    "name": "Miner",
+    "description": "When you play this card, you immediately _(and only once via this card)_ receive 1 stone, 1 ore, and 1 silver for each longship you have. _(The amount of ore on the longships does not matter.)_",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 23,
+    "deck": "A",
+    "name": "Custodian",
+    "description": "When you play this card, you immediately _(and only once via this card)_ receive 2 silver per _(stone and long)_ house you have _(sheds do not count)_.",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 24,
+    "deck": "A",
+    "name": "Whaling Equipper",
+    "description": "When you play this card, you immediately _(and only once via this card)_ receive 1 oil for each knarr you have and 1 wood for each whaling boat you have _(from the general supply)_. _(The amount of ore on the whaling boats does not matter.)_",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 25,
+    "deck": "B",
+    "name": "Meat Trader",
+    "description": "When you play this card, you immediately _(and only once via this card)_ receive 1 salt meat for each knarr you have.",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 26,
+    "deck": "C",
+    "name": "Meat Inspector",
+    "description": "When you play this card, you immediately _(and only once via this card)_ receive 1 silver for each type of red good you have in your supply and stable. Pregnant and non-pregnant animals are considered the same type. _(Red goods in your houses do not count.)_",
+    "type": "immediate",
+    "errata": "Also applies to pigs and horses.",
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 27,
+    "deck": "A",
+    "name": "Fisherman",
+    "description": "When you play this card, you immediately _(and only once via this card)_ receive 1 stockfish for each whaling boat you have _(so at most 3 stockfish)_. _(The amount of ore on the whaling boats does not matter.)_",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 28,
+    "deck": "B",
+    "name": "Locksmith",
+    "description": "With each new chest or treasure chest that you receive in your supply, you can also buy 1 oil for 1 silver.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 29,
+    "deck": "B",
+    "name": "Meat Preserver",
+    "description": "When you play this card, you immediately _(and only once via this card)_ receive 1 salt meat for each pair of game meat and whale meat in your supply. _(Goods on your boards do not count.)_",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 30,
+    "deck": "B",
+    "name": "Silk Merchant",
+    "description": "When you play this card, you immediately _(and only once via this card)_ receive an amount of silver: if you have 1/2/3 silk in your supply, you receive 1/3/6 silver, respectively. _(Silk on your boards does not count.)_",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 31,
+    "deck": "C",
+    "name": "Storeman",
+    "description": "When you play this card, you immediately _(and only once via this card)_ receive a fourth good tile of a type of which you have exactly three in your supply. _(This does not include your stables, so you cannot receive sheep or cattle from this. Your green craft products and blue luxury goods do count; goods on your boards do not.)_",
+    "type": "immediate",
+    "errata": "Excludes pigs and horses (as it excludes sheep and cattle).",
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 32,
+    "deck": "A",
+    "name": "Weapons Supplier",
+    "description": "When you play this card, you immediately _(and only once via this card)_ receive a number of weapon cards from the draw pile. The number depends on the number of longships you have: if you have 0/1/2/3/4 longships, you receive 0/2/5/10/10 weapon cards, respectively. Draw the cards from the face-down draw pile and place them face up in front of you. _(The amount of ore on the longships does not matter.)_",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 33,
+    "deck": "A",
+    "name": "Sheep Shearer",
+    "description": "When you play this card, if you have at least 3/4/6 sheep, you immediately _(and only once via this card)_ receive 1/2/3 wool, respectively. _(It does not matter whether or not the sheep are pregnant.)_",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 34,
+    "deck": "A",
+    "name": "Shepherd",
+    "description": "When you play this card, if you have at least 2 sheep, you immediately _(and only once via this card)_ receive 1 milk and 1 wool. If you have at least 4 sheep, you receive 1 additional wool. _(It does not matter whether or not the sheep are pregnant.)_",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 35,
+    "deck": "A",
+    "name": "Cattle Breeder",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ play an Animal Breeding phase for you only. This is considered a separate Animal Breeding phase _(with regard to other occupations)_.",
+    "type": "immediate",
+    "errata": "Also applies to pigs and horses.",
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 36,
+    "deck": "A",
+    "name": "Ship’s Cook",
+    "description": "Immediately before each time you take an “Overseas Trading” action _(on an action space or via an occupation)_, you can take a “⇧ 1 Good” action for 1 salt meat, game meat, or whale meat only. _(Sheep and cattle are excluded from this. By the way, you can use an “Overseas Trading” action space and pay 1 silver, even if you do not turn a single green craft product to the other side.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 37,
+    "deck": "A",
+    "name": "Foreign Trader",
+    "description": "Immediately before each time you take an “Overseas Trading” action _(on an action space or via an occupation)_, you can take a “⇧ 1 Good” action. _(By the way, you can use an “Overseas Trading” action space and pay 1 silver, even if you do not turn a single green craft product to the other side.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 38,
+    "deck": "A",
+    "name": "Peacemaker",
+    "description": "In the New Weapon phase _(phase 4)_ of each round, instead of drawing a weapon card, you can take either 1 wood, 1 stone, or 1 ore from the general supply.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 39,
+    "deck": "C",
+    "name": "Modifier",
+    "description": "At any time and any number of times, you can return ore from your whaling boats and longships to your supply. _(Of course, you cannot remove the preprinted ore on your boats.)_",
+    "type": "anytime",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 40,
+    "deck": "B",
+    "name": "Master Joiner",
+    "description": "At any time and any number of times, you can place wood on empty spaces of your stone and long houses as you would silver.",
+    "type": "anytime",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 41,
+    "deck": "A",
+    "name": "Slowpoke",
+    "description": "Immediately after the Bonus phase _(phase 10)_ of each round, you can exchange either _(exactly)_ 1 silver or mead for 1 oil.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 42,
+    "deck": "B",
+    "name": "Steward",
+    "description": "Immediately before the Income phase _(phase 7)_ of each round, you can place exactly 1 wood or 1 stone in one of your sheds to receive 1 silver. _(You only receive the silver if you do place a building resource.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 43,
+    "deck": "A",
+    "name": "Fruit Picker",
+    "description": "When you play this card, you immediately _(and only once via this card)_ receive 1 fruit.",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 44,
+    "deck": "B",
+    "name": "Master Tailor",
+    "description": "At any time and any number of times, you can pay 1 hide, 1 wool, and 1 linen from your supply to receive 1 clothing and 3 silver.",
+    "type": "anytime",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 45,
+    "deck": "C",
+    "name": "Pirate",
+    "description": "At any time and any number of times, you can pay 1 wood and 6 silver to receive 1 treasure chest.",
+    "type": "anytime",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 46,
+    "deck": "B",
+    "name": "Ship Architect",
+    "description": "At any time and any number of times, you can exchange 3 wood and 1 wool in your supply for 1 longship. You can use linen in place of wool. _(Of course, you must have room in your Landing stages to receive the longship. Vikings preferred to make canvases from wool. This exchange is not considered a “Ship Building” action and does not trigger cards that require the latter.)_",
+    "type": "anytime",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 47,
+    "deck": "A",
+    "name": "Tanner",
+    "description": "At any time and any number of times, you can exchange salt meat in your supply for hide at a 1:1 ratio.",
+    "type": "anytime",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 48,
+    "deck": "A",
+    "name": "Farmer",
+    "description": "At any time and any number of times, you can discard 1 cattle from your cattle stable to receive 1 jewelry. _(It does not matter whether or not the cattle is pregnant.)_",
+    "type": "anytime",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 49,
+    "deck": "C",
+    "name": "Plower",
+    "description": "At any time and any number of times, you can pay 1 _(pregnant or non-pregnant)_ cattle from your cattle stable to receive 1 of each of the following goods: peas, flax, beans, grain, cabbage. For the purposes of occupations, this counts as an additional Harvest phase _(phase 2)_ for you.",
+    "type": "anytime",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 50,
+    "deck": "A",
+    "name": "Rune Engraver",
+    "description": "At any time and any number of times, you can pay 1 rune stone from your supply to receive 1 hide.",
+    "type": "anytime",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 51,
+    "deck": "B",
+    "name": "Master Mason",
+    "description": "At any time and any number of times, you can pay 1 rune stone from your supply to receive 1 silver and either 1 milk or 1 cabbage.",
+    "type": "anytime",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 52,
+    "deck": "A",
+    "name": "Tutor",
+    "description": "At any time and any number of times, you can pay 1 silver to play an occupation from your hand.",
+    "type": "anytime",
+    "errata": "You may use this card instead to discard a card to gain a VP token.",
+    "harvestBanList": true,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 53,
+    "deck": "B",
+    "name": "Farm Shop Owner",
+    "description": "At any time and any number of times, you can pay 1 silver to turn an orange good in your supply to its red side. This is considered a “⇧ 1 Good” action.",
+    "type": "anytime",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 54,
+    "deck": "A",
+    "name": "Tradesman",
+    "description": "At any time and any number of times, you can exchange silverware in your supply for either silk or chest at a 1:1 ratio.",
+    "type": "anytime",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 55,
+    "deck": "C",
+    "name": "Treasurer",
+    "description": "At any time and any number of times, you can pay 3 silver to exchange 1 chest in your supply for 1 treasure chest.",
+    "type": "anytime",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 56,
+    "deck": "A",
+    "name": "Arms Dealer",
+    "description": "At any time and any number of times, you can discard any 2 weapon cards to receive 1 ore from the general supply.",
+    "type": "anytime",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 57,
+    "deck": "B",
+    "name": "Bean Farmer",
+    "description": "At any time and any number of times, you can pay 2 beans in your supply to receive 1 peas, 1 mead, and 1 stockfish.",
+    "type": "anytime",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 58,
+    "deck": "A",
+    "name": "Linseed Oil Presser",
+    "description": "At any time and any number of times, you can exchange 2 flax in your supply for 3 oil.",
+    "type": "anytime",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 59,
+    "deck": "A",
+    "name": "Linen Weaver",
+    "description": "At any time and any number of times, you can pay 2 flax from your supply and 1 silver to receive 2 linen.",
+    "type": "anytime",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 60,
+    "deck": "C",
+    "name": "Inspector",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ move a Viking from an action space of your choice to your Thing Square and use it again later that round. Additionally, if you pay an amount of silver equal to the current round, you can move two Vikings instead of one from a single action space. _(e.g., in round 5, this would cost you 5 silver.)_ _(If by this an action space becomes unoccupied, it can be used again that round.)_",
+    "type": "immediate",
+    "errata": "Cannot be used with the fifth action column (final action).",
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 61,
+    "deck": "C",
+    "name": "Wharf Owner",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ sell 1 longship for 8 silver. You lose the ore on the longship, if any.",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 62,
+    "deck": "B",
+    "name": "Fine Blacksmith",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ pay 1 ore and 1 silver to receive either the “Crucifix” or “Cloakpin” special tile. _(This card has no effect if both tiles are already taken, but is still worth 3 points.)_",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 63,
+    "deck": "C",
+    "name": "Hornturner",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ discard 1 sheep from your sheep stable to receive 1 salt meat, 1 hide, and 1 wool. _(It does not matter whether or not the sheep is pregnant.)_ and/or, if the Drinking Horn is still available for purchase, you can buy it for 3 silver.",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 64,
+    "deck": "A",
+    "name": "Ship Builder",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ pay 2 silver to exchange 1 whaling boat for 1 longship. You lose the ore on the whaling boat, if any. _(This is not considered a “Ship Building” action.)_",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 65,
+    "deck": "A",
+    "name": "Dragon-slayer",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ exchange 2 snares and 2 spears for 1 treasure chest.",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 66,
+    "deck": "A",
+    "name": "Field Farmer",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ pay 1 silver to exchange a single farm product goods tile _(orange tile)_ for a more valuable one: up to two times, you can exchange the good for another that is located diagonally above to the right of it in the goods boxes. _(For instance, you could exchange beans for “skin and bones” via salt meat, or cabbage for robe via sheep.)_",
+    "type": "immediate",
+    "errata": "Does not apply to the new goods tiles in the additional goods box.",
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 67,
+    "deck": "C",
+    "name": "Private Chef",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ buy 2 silverware, 1 game meat, and 1 mead for a total of 4 silver.",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 68,
+    "deck": "A",
+    "name": "Supplier of Weapons",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ draw 4 weapon cards from the face-down draw pile and place them face up in front of you.",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 69,
+    "deck": "C",
+    "name": "Equipment Supplier",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ take weapon cards until you have 2 of each type. _(For instance, if you had 2 “bow and arrow” weapon cards and 1 snare, you would receive 1 snare, 2 spears, and 2 long swords.)_ Look through the discard pile _(or the draw pile, if need be)_ and take the weapon cards from there.",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 70,
+    "deck": "B",
+    "name": "Courier",
+    "description": "When you play this card, if the “Cloakpin” special tile is on any player’s board _(including yours)_, you can immediately _(and only once via this card)_ move it to your supply. Fill the spot you took the Cloakpin from with 1 silverware and 1 rune stone from the general supply.",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 71,
+    "deck": "C",
+    "name": "Innkeeper",
+    "description": "When you play this card, if the “Drinking Horn” special tile is on any player’s board _(including yours)_, you can immediately _(and only once via this card)_ move it to your supply. Fill the spot you took the Drinking Horn from with 1 chest and 1 rune stone from the general supply.",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 72,
+    "deck": "B",
+    "name": "Earl",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ buy a stone house for an amount of silver equal to the current round. _(This is not considered a “House Building” action. In round 5, for instance, the stone house would cost 5 silver.)_",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 73,
+    "deck": "C",
+    "name": "Metalsmith",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ either receive 1 silverware at no cost, or buy the “Crucifix” special tile for 2 silver, or buy the “Chalice” special tile for 5 silver. _(These are the printed costs.)_",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 74,
+    "deck": "A",
+    "name": "Cowherd",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ pay exactly 2 silver and 1 grain from your supply to receive 1 non-pregnant cattle in your cattle stable.",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 75,
+    "deck": "C",
+    "name": "Bone Collector",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ buy 1 “skin and bones” goods tile for 1 silver.",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 76,
+    "deck": "A",
+    "name": "Homecomer",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ move 1 Viking from each action space in the fourth column to your Thing Square. You can use these Vikings again later that round. _(It does not matter whether or not there are still four Vikings on those action spaces.)_",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 77,
+    "deck": "A",
+    "name": "Follower",
+    "description": "After you play this card, you can immediately _(and only once via this card)_ use an occupied action space in the second column, regardless of who occupies the space. It must be occupied, though. _(You cannot instead use an occupied action space in the first, third, or fourth column, or an unoccupied one.)_ If you choose “Laying a Snare” or “Pillaging” and fail, you do not receive a Viking back.",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 78,
+    "deck": "B",
+    "name": "Traveling Merchant",
+    "description": "When you play this card, if you have 1/2/3/4 knarrs, you can immediately _(and only once via this card)_ turn 2/4/6/7 goods tiles to the other side, respectively. Orange and green tiles are best suited for this. _(This is not considered a “⇧ x Goods” action.)_",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 79,
+    "deck": "A",
+    "name": "Breeder",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ turn 1 non-pregnant cattle in your cattle stable to the “pregnant cattle” side. _(This is not considered an Animal Breeding phase.)_",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 80,
+    "deck": "B",
+    "name": "Shepherd Boy",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ pay 2 silver to receive 1 non-pregnant sheep in your sheep stable.",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 81,
+    "deck": "C",
+    "name": "Quarter-master",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ buy a longship. If you do, you receive a discount of 1 silver for each long sword you have, counting each “bow and arrow” and “spear” weapon card as half of a long sword. Round the final cost down, if need be.",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 82,
+    "deck": "B",
+    "name": "Longship Builder",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ buy a longship. The cost depends on the number of knarrs you have: if you have 1/2/3 knarrs, the longship only costs you 6/3/1 silver instead of 8, respectively. _(In other words, you receive a discount of 2/5/7 silver.)_",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 83,
+    "deck": "A",
+    "name": "Wholesaler",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ take a “⇧ 4 Goods” action. Unlike the action space with the same illustration, the 4 goods must all be of the same type _(i.e., they must be of the same shape and color)_. You can upgrade fewer than 4 goods. Pregnant and non-pregnant animals of one type are considered to be of the same type.",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 84,
+    "deck": "B",
+    "name": "Harbor Guard",
+    "description": "When you play this card, you can emigrate immediately _(and only once via this card)_. This emigration costs the same as it would on the action space, but you receive a discount of 1 silver for each large ship you had before the emigration. _(The minimum cost is 0. Large ships are knarrs and longships. The amount of ore on the longships does not matter.)_",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 85,
+    "deck": "C",
+    "name": "Hornblower",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ pay 1 silver to take a “Hunting Game” action, and/or pay 2 silver to take a “Laying a Snare” action. Failing one _(or both)_ of these actions does not cause Vikings to return.",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 86,
+    "deck": "A",
+    "name": "Hide Buyer",
+    "description": "When you play this card, you can immediately _(and only once via this card)_ pay 2/4/6 silver to receive 1/2/3 hides.",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 87,
+    "deck": "A",
+    "name": "Preacher",
+    "description": "When you play this card, you can immediately move the “Crucifix” special tile from the oval supply board to your supply. Alternatively, you can take a “Take 4 Building Resources from a Mountain Strip” action. _(If you do the latter, you must take 4 items from a single mountain strip. As usual, the “2 silver” are considered a single item.)_",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 88,
+    "deck": "C",
+    "name": "Clerk",
+    "description": "Immediately before each time you take an “Overseas Trading” action _(on an action space or via an occupation)_, for each knarr you have, you can take a “⇧ 1 Good” action for 1 silver per action. So you can exchange a good for another one that is located to the top left of it in the goods boxes _(e.g., 1 cattle for 1 robe)_. _(By the way, you can use an “Overseas Trading” action space and pay 1 silver, even if you do not turn a single green craft product to the other side.)_",
+    "type": "each time",
+    "errata": "Does not apply to the new goods tiles in the additional goods box.",
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 89,
+    "deck": "A",
+    "name": "Catapulter",
+    "description": "Each time you take a “Raiding” or “Pillaging” action _(on an action space or via an occupation)_, for each stone you spend, you receive +2 instead of +1 on each of your dice rolls. _(This card can be combined with other cards modifying dice rolls.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 90,
+    "deck": "C",
+    "name": "Sword Fighter",
+    "description": "Immediately before each time you take a “Raiding” action _(on an action space or via an occupation)_, you can return exactly 1 ore from the raiding longship to the general supply to receive +2 on each of your dice rolls during that raid. _(This does not apply to pillaging. This card can be combined with other cards modifying dice rolls.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 91,
+    "deck": "C",
+    "name": "Latecomer",
+    "description": "At the end of the Actions phase _(phase 5)_ of each round, you can pay 1 silver to use an unoccupied action space in the first column without placing any more Vikings. The action space you choose must be above or below another action space in the first column with one of your Vikings on it. _(It does not matter nor does it count whether the action space you choose is adjacent to one in the second column with two of your Vikings on it. In the solo game, only Vikings in the active color count.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 92,
+    "deck": "C",
+    "name": "Sympathetic Soul",
+    "description": "In the Harvest phase _(phase 2)_ of each round with no harvest, if you then have 3/4/5 special tiles, you receive 1/2/3 silver, respectively. _(The size of your special tiles does not matter, just like the fact whether they are in your supply or on your boards. Special tiles that you had to return do not count.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 93,
+    "deck": "C",
+    "name": "Helper in Time of Need",
+    "description": "In the Harvest phase _(phase 2)_ of each round with no harvest, if you have exactly 1 boat, you receive 1 beans. If you have exactly 2 boats, you receive 1 grain. If you have 3 boats, you receive 1 cabbage. _(The amount of ore on the whaling boats does not matter. You cannot take beans in place of grain, and you cannot take beans or grain in place of cabbage. Also, you cannot discard or simply ignore a whaling boat to receive another reward. Although you do receive a harvest good from this card, the round is still considered to have “no harvest”, so this card does no trigger other cards that require a harvest.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 94,
+    "deck": "A",
+    "name": "Spice Merchant",
+    "description": "Once per Harvest phase _(phase 2)_ of each round with no harvest, you can exchange exactly 2 oil in your supply for 1 spices.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 95,
+    "deck": "A",
+    "name": "Wanderer",
+    "description": "In the Harvest phase _(phase 2)_ of each round with no harvest, you can take a “Take 2 Building Resources from a Mountain Strip” action. _(As usual, the “2 silver” are considered a single item.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 96,
+    "deck": "A",
+    "name": "Meat Merchant",
+    "description": "In the Harvest phase _(phase 2)_ of each round with no harvest, you can exchange either 1 game meat in your supply for 1 whale meat, or 1 whale meat in your supply for 2 game meat.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 97,
+    "deck": "B",
+    "name": "Pea Counter",
+    "description": "In the Harvest phase _(phase 2)_ of each round with no harvest, you can double the amount of peas in your supply — to a maximum of 8 peas. _(So you can double at most 4 peas. This does not apply to peas in your houses.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 98,
+    "deck": "A",
+    "name": "Nobleman",
+    "description": "Immediately after each time you place 1 grain in a stone or long house, you can buy exactly 1 silk for 2 silver.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 99,
+    "deck": "A",
+    "name": "Preceptor",
+    "description": "Each time you would receive an occupation card into your hand, you can play an occupation card from your hand instead. _(If you would receive multiple occupations at once, decide for each occupation individually whether you want to receive it or play one instead.)_",
+    "type": "each time",
+    "errata": "You may use this card instead to discard a card to gain a VP token.",
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 100,
+    "deck": "B",
+    "name": "Undertaker",
+    "description": "Each time you place 1 rune stone on an exploration board, you receive 1 silver. _(This does not apply to your home board.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 101,
+    "deck": "B",
+    "name": "Judge",
+    "description": "Each time you place 1 rune stone in one of your _(stone or long)_ houses, you receive 1 mead and 1 silver. _(This does not apply to your home board and exploration boards.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 102,
+    "deck": "B",
+    "name": "Fur Merchant",
+    "description": "Each time you would receive a “⇧ 1 Good” action on an action space _(not via an occupation)_, you can exchange 1 game meat or 1 silk for 1 fur instead. _(This does not apply to “⇧ 2/3/4 Goods” actions.)_",
+    "type": "each time",
+    "errata": "Also applies to the action space in the second column, 3 resources + 2 weapon cards. For the alternative, you cannot take the 2 weapon cards.",
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 103,
+    "deck": "C",
+    "name": "Forest Blacksmith",
+    "description": "Immediately before each time you exchange 1 ore on the action space that lets you exchange 1 wood/ore for 1 chest and 1 silver, you can take a “Take 1 Building Resource from a Mountain Strip” action. _(This does not apply if you exchange 1 wood.)_ This effect also applies to the action space that lets you exchange 1 ore for a blue good with a “forge tongs” symbol. _(As usual, the “2 silver” on the mountain strips are considered a single item. Tip: enclose the ore space on your home board as soon as possible.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 104,
+    "deck": "B",
+    "name": "Disheartened Warrior",
+    "description": "Each time you roll for raiding, if you declare your raid a failure after your _(first or)_ second dice roll, you also receive either 1 stockfish or 1 oil _(on top of your consolatory 1 stone and 1 long sword)_.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 105,
+    "deck": "B",
+    "name": "Knarr Builder",
+    "description": "Each time you use the “Whaling Boat Building” action space in the “Ship Building” category _(in the first column of the game board)_, instead of a whaling boat, you can build a knarr for 3 wood. _(This is considered a “Ship Building” action.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 106,
+    "deck": "B",
+    "name": "Warmonger",
+    "description": "You can use the “Plundering” action space with 1/2 fewer Vikings if you have 3/4 longships in your bay. _(As usual, the amount of ore on the longships does not matter.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 107,
+    "deck": "B",
+    "name": "Adventurer",
+    "description": "Each time you use the “Exploring the Shetland or Faroe Islands” action space, instead of taking the Shetland or Faroe Islands, you can take any other face-up exploration board. Regardless of your choice, the exploration requires a ship of any type, e.g., a whaling boat.",
+    "type": "each time",
+    "errata": "Also applies to the action space in the fifth column with the whaling board/knarr/longship icon.",
+    "harvestBanList": true,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 108,
+    "deck": "C",
+    "name": "Ironsmith",
+    "description": "Each time you exchange ore on the action space that lets you exchange 1 wood/ore for 1 chest and 1 silver, you can pay 1 silver to receive one of the placed Vikings back, which you can place again later that round. _(This does not apply if you exchange 1 wood.)_ This effect also applies to the action space that lets you exchange 1 ore for a blue good with a “forge tongs” symbol. _(Tip: enclose the ore space on your home board as soon as possible.)_",
+    "type": "each time",
+    "errata": "Cannot be used with the fifth action column (final action).",
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 109,
+    "deck": "B",
+    "name": "Master Count",
+    "description": "Immediately after each time you use the “Overseas Trading” action space requiring 2 Vikings, you receive 1 silver for each knarr you have. _(By the way, you can use an “Overseas Trading” action space and pay 1 silver, even if you do not turn a single green craft product to the other side.)_",
+    "type": "each time",
+    "errata": "If the relevant action space is not in the game, discard this card and draw a new one.",
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 110,
+    "deck": "C",
+    "name": "Birka Settler",
+    "description": "Immediately after each time you use the “Overseas Trading” action space requiring two Vikings, you can take an “Emigration” action as you would on an action space. _(By the way, you can use an “Overseas Trading” action space and pay 1 silver, even if you do not turn a single green craft product to the other side.)_",
+    "type": "each time",
+    "errata": "If the relevant action space is not in the game, discard this card and draw a new one.",
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 111,
+    "deck": "C",
+    "name": "Artist",
+    "description": "Each time you use a “Crafting” action space to exchange building resources _(wood, stone, ore)_, you receive 1 silver for each type of building resource you exchange. _(The number of building resources does not count, only the number of different types of building resources.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 112,
+    "deck": "B",
+    "name": "Barkeeper",
+    "description": "Each time you use a “Crafting” action space, you also receive 1 mead.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 113,
+    "deck": "A",
+    "name": "Craft Apprentice",
+    "description": "Immediately before each time you use a “Crafting” action space, you can take a “Take 1 Building Resource from a Mountain Strip” action. _(As usual, the “2 silver” are considered a single item.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 114,
+    "deck": "C",
+    "name": "Silk Stitcher",
+    "description": "Immediately after each time you use a “Crafting” action space, you can also buy exactly 1 silk for 3 silver.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 115,
+    "deck": "B",
+    "name": "Princess",
+    "description": "Each time you use a “House Building” action space, you also receive 1 silverware. _(This effect does also apply to the action space in the fourth column that lets you build a house and buy a ship.)_",
+    "type": "each time",
+    "errata": "Only applies if you build a house or shed with the action.",
+    "harvestBanList": true,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 116,
+    "deck": "C",
+    "name": "Master Bricklayer",
+    "description": "Each time you use a “House Building” action space to build a stone or long house, you receive a discount of 1 stone. _(This effect does also apply to the action space in the fourth column that lets you build a house and buy a ship. If another card replaces the building cost of the shed with stone, this effect will also apply to the shed.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 117,
+    "deck": "A",
+    "name": "Shipowner",
+    "description": "Immediately after each time you build a knarr or longship paying at least 1 wood, you can take a “⇧ 1 Good” action. _(This effect does also apply to the action space in the fourth column that lets you build a house and buy a ship.)_",
+    "type": "each time",
+    "errata": "Does not apply to the bonus “knarr” gained from the Waterford exploration board.",
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 118,
+    "deck": "C",
+    "name": "Messenger",
+    "description": "Each time you use a “Weekly Market” action space, you also receive 1 mead and 1 stone. _(The large action space in the fourth column also belongs to the “Weekly Market” category.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 119,
+    "deck": "B",
+    "name": "Milkman",
+    "description": "Each time you use a “Weekly Market” action space, you also receive 1 milk. _(The large action space in the fourth column also belongs to the “Weekly Market” category.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 120,
+    "deck": "B",
+    "name": "Middleman",
+    "description": "Immediately after each time you use a “Weekly Market” action space, you can pay 1 silver to take a “⇧ 1 Good” action. _(The large action space in the fourth column also belongs to the “Weekly Market” category.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 121,
+    "deck": "B",
+    "name": "Carpenter",
+    "description": "Immediately before each time you use an “Ship Building” or “House Building” action space, you can take a “Take 1 Building Resource from a Mountain Strip” action. _(As usual, the “2 silver” are considered a single item.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 122,
+    "deck": "A",
+    "name": "Mountain Guard",
+    "description": "Each time you use an action space with the “Take Building Resources from One or More Mountain Strips” action, you can receive 1 additional good. If you took goods of 2 different types _(like ore and silver)_, you receive 1 mead. If you took goods of 3 or 4 different types, you receive 1 hide or 1 chest, respectively. _(The 4 different types would be wood, stone, ore, and silver.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 123,
+    "deck": "C",
+    "name": "Oil Seller",
+    "description": "Immediately after each time you use an action space with a “⇧ 1 Good” action, you can exchange 1 oil for 1 silverware _(even if you have just received the oil from the action)_.",
+    "type": "each time",
+    "errata": "Also applies to the action space in the second column, 3 resources + 2 weapon cards.",
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 124,
+    "deck": "B",
+    "name": "Laborer",
+    "description": "Each time you use an action space that gives you exactly 2 silver _(no more, no less)_, you can pay these 2 silver immediately to receive 1 grain and 2 wood _(from the general supply)_.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 125,
+    "deck": "C",
+    "name": "Scribe",
+    "description": "Each time you take an _(orange)_ “Exploration” or _(yellow)_ “Emigration” action _(on an action space or via an occupation)_, you also receive 1 rune stone.",
+    "type": "each time",
+    "errata": "Does not apply to small emigrations with a whaling boat.",
+    "harvestBanList": true,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 126,
+    "deck": "A",
+    "name": "Trapper",
+    "description": "Each time you take a “Laying a Snare” action _(on an action space or via an occupation)_, if you succeed, you also receive 1 silver.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 127,
+    "deck": "B",
+    "name": "Angler",
+    "description": "Each time you take a “Laying a Snare” action _(on an action space or via an occupation)_, if you succeed, you also receive 1 stockfish.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 128,
+    "deck": "A",
+    "name": "Digger",
+    "description": "Each time you take a “Laying a Snare” action _(on an action space or via an occupation)_, if you succeed, you receive a “Take 1 Building Resource from a Mountain Strip” action. _(As usual, the “2 silver” are considered a single item.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 129,
+    "deck": "B",
+    "name": "Meat Curer",
+    "description": "Immediately after each time you take a “Laying a Snare” action _(on an action space or via an occupation)_, if you succeed, you can discard 1 snare to receive 1 salt meat. _(You receive 1 snare on success and you discard 1 snare for the effect of this occupation: at the end of the day, this is a wash.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 130,
+    "deck": "C",
+    "name": "Snare Specialist",
+    "description": "Immediately after each time you use the “Laying a Snare” action space with 2 Vikings, if you succeed, you can discard 2 snares to return 1 of the placed Vikings to your Thing Square and use it again later this round. _(Effectively, you only end up losing 1 snare, as you receive 1 snare as a reward.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 131,
+    "deck": "C",
+    "name": "Bait Layer",
+    "description": "Each time you take a “Laying a Snare” action _(on an action space or via an occupation)_, whether you succeed or not, you can exchange exactly 1 stockfish in your supply for 1 game meat.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 132,
+    "deck": "B",
+    "name": "Berserker",
+    "description": "Immediately before each time you take a “Pillaging” action _(on an action space or via an occupation)_, you can return exactly 1 ore from the pillaging longship to the general supply to receive +3 on each of your dice rolls during that pillage. _(This does not apply to raiding. This card can be combined with other cards modifying dice rolls. Tip: enclose the ore space on your home board as soon as possible.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 133,
+    "deck": "B",
+    "name": "Lance Bearer",
+    "description": "Each time you take a “Raiding” action _(on an action space or via an occupation)_, if you succeed, you also receive either 1 silver or 1 peas. _(This does not apply to pillaging.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 134,
+    "deck": "A",
+    "name": "Drunkard",
+    "description": "Each time you take a “Raiding” action _(on an action space or via an occupation)_, if you fail _(including on purpose)_, you also receive a consolatory 1 mead. _(This does only apply to raiding, but not pillaging.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 135,
+    "deck": "A",
+    "name": "Lone Wolf",
+    "description": "Immediately after each time you take a “Raiding” or “Pillaging” action _(on an action space or via an occupation)_, if you used exactly 1 long sword during that action and succeeded, you receive the long sword back. _(If you used 2 or more long swords during the action or failed, you do not receive any back.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 136,
+    "deck": "C",
+    "name": "Raider",
+    "description": "Each time you take a “Raiding” or “Pillaging” action _(on an action space or via an occupation)_, you receive +1 on each of your dice rolls. Also, you can split your battle result to receive two goods. _(Your battle result is the modified dice roll. This card can be combined with other cards modifying dice rolls.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 137,
+    "deck": "A",
+    "name": "Melee Fighter",
+    "description": "Each time you take a “Raiding” or “Pillaging” action _(on an action space or via an occupation)_, you can use spears instead of long swords _(in any combination)_.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 138,
+    "deck": "C",
+    "name": "Robber",
+    "description": "Each time you take a “Raiding” or “Pillaging” action _(on an action space or via an occupation)_, you can take a green tile instead of a blue one. The sword value of the green tile is equal to the sword value of its blue back minus 1. _(For instance, green clothing would have a sword value of 14, because the blue silver hoard on the other side of the tile has a sword value of 15.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 139,
+    "deck": "C",
+    "name": "Loot Hunter",
+    "description": "Each time you take a “Raiding” or “Pillaging” action _(on an action space or via an occupation)_, the sword value of the special tile with the highest value that is still on the oval supply board is reduced by 1. _(This can affect multiple tiles.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 140,
+    "deck": "A",
+    "name": "Blubber Cook",
+    "description": "Each time you take a “Whaling” action _(on an action space or via an occupation)_, if you succeed, you receive 1 additional oil _(for a total of 2 oil)_.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 141,
+    "deck": "C",
+    "name": "Ivory Sculptor",
+    "description": "Each time you take a “Whaling” action _(on an action space or via an occupation)_, if you succeed without spending any wood, you receive 1 cabbage/beans/peas for using exactly 1/2/3 whaling boats. _(You cannot take peas in place of beans, and you cannot take beans or peas in place of cabbage. You cannot discard or simply ignore a whaling boat to receive another reward.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 142,
+    "deck": "B",
+    "name": "Whale Catcher",
+    "description": "Immediately after each time you take a “Whaling” action _(on an action space or via an occupation)_, if you used exactly 1 spear and succeeded, you receive the spear back. _(If you used 2 or more spears or failed, you receive no spears back.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 143,
+    "deck": "B",
+    "name": "Antlers Seller",
+    "description": "Each time you take a “Hunting Game” action _(on an action space or via an occupation)_, if you succeed, you also receive 1 silver.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 144,
+    "deck": "B",
+    "name": "Deerstalker",
+    "description": "Each time you take a “Hunting Game” action _(on an action space or via an occupation)_, if you succeed, you can also buy 1 “skin and bones” goods tile for 2 silver.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 145,
+    "deck": "A",
+    "name": "Forester",
+    "description": "Immediately before each time you take a “Hunting Game” action, you can take a “Take 1 Building Resource from a Mountain Strip” action. _(As usual, the “2 silver” are considered a single item.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 146,
+    "deck": "C",
+    "name": "Sledger",
+    "description": "Each time you take a “Hunting Game” or “Laying a Snare” action _(on an action space or via an occupation)_, you receive -1 on each of your dice rolls. For instance, a rolled “1” becomes “0”. _(This card can be combined with other cards modifying dice rolls.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 147,
+    "deck": "A",
+    "name": "Steersman",
+    "description": "If you have a knarr, you can take actions requiring a longship _(raiding, pillaging, plundering, or a far exploration)_ even if you do not have a longship. _(Even with this occupation, you still cannot place any ore on your knarrs.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 148,
+    "deck": "C",
+    "name": "Spice Trader",
+    "description": "Immediately after each time you build a knarr paying at least 1 wood, you can buy 1 spices for 3 silver. _(This effect does also apply to the action space in the fourth column that lets you buy a ship and build a house.)_",
+    "type": "each time",
+    "errata": "Does not apply to the bonus “knarr” gained from the Waterford exploration board.",
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 149,
+    "deck": "A",
+    "name": "Priest",
+    "description": "Immediately before each time you use either “Overseas Trading” action space, you receive 1 oil. _(By the way, you can use an “Overseas Trading” action space and pay 1 silver, even if you do not turn a single green craft product to the other side.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 150,
+    "deck": "C",
+    "name": "Meat Buyer",
+    "description": "Each time you receive 2 stockfish/salt meat at once _(on an action space or via an occupation)_, you can choose to take 1 game meat in place of 1 one of the stockfish/ salt meat.",
+    "type": "each time",
+    "errata": "Discard this card and draw a new one.",
+    "harvestBanList": true,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 151,
+    "deck": "C",
+    "name": "Thing Spokesman",
+    "description": "Each time you move exactly 1 or 2 Vikings from the game board to your Thing Square _(due to a failed dice roll or another occupation)_, you also receive 1 silver.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 152,
+    "deck": "A",
+    "name": "Merchant",
+    "description": "Each time you take a “⇧ 3 Goods” or “⇧ 4 Goods” action _(on an action space or via an occupation)_, you can take another “⇧ 1 Good” action for one of the exchanged goods. For instance, you could exchange a _(orange)_ “cabbage” goods tile in your supply for a _(green)_ “skin and bones” goods tile.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 153,
+    "deck": "A",
+    "name": "Proficient Hunter",
+    "description": "Each time you take an action requiring a dice roll, you can roll up to 4 times instead of just 3.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 154,
+    "deck": "A",
+    "name": "Woodcutter",
+    "description": "In the Actions phase _(phase 5)_ of each round, if you receive at least 2 wood from a Viking action, you also receive 1 silver. You can only use this effect once per action. _(This effect does also apply to the action space providing 1 wood per player and 1 ore from the general supply, but not to the Bonus phase.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 155,
+    "deck": "B",
+    "name": "Cooper",
+    "description": "In the Actions phase _(phase 5)_ of each round, if you receive at least 2 wood from a Viking action, you can immediately afterward exchange exactly 1 wood for 1 stockfish. You can only use this effect once per action. _(This effect does not apply to the Bonus phase.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 156,
+    "deck": "B",
+    "name": "Stone Crusher",
+    "description": "In the Actions phase _(phase 5)_ of each round, if you receive at least 1 stone from a Viking action, you also receive 1 silver. You can only use this effect once per action. _(This effect does not apply to the Bonus phase.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 157,
+    "deck": "C",
+    "name": "Skinner",
+    "description": "In the Feast phase _(phase 9)_ of each round, for each _(pregnant and non-pregnant)_ farm animal _(sheep and cattle)_ you place on the “Banquet Table” track, you immediately receive 1 “skin and bones” tile. _(If you place the farm animals on the Banquet Table before the feast, as permitted by the rules, you still receive the reward, but not before the Feast phase.)_",
+    "type": "each time",
+    "errata": "Does not apply to pigs and horses.",
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 158,
+    "deck": "A",
+    "name": "Barbarian",
+    "description": "In the Feast phase _(phase 9)_ of each round, for each game meat or whale meat you place on the “Banquet Table” track, you receive 3 weapon cards and 1 silver _(which you can use for the feast right away)_. Take the weapon cards from the draw pile and place them face up in front of you. _(If you place the meat on the Banquet Table before the feast, as permitted by the rules, you still receive the reward, but not before the Feast phase.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 159,
+    "deck": "B",
+    "name": "Festive Hunter",
+    "description": "In the Feast phase _(phase 9)_ of each round, if you place at least 1 game meat on the “Banquet Table” track, you can immediately afterward take a “Hunting Game” action _(without placing any Vikings)_. _(If you place the meat on the Banquet Table before the feast, as permitted by the rules, you still receive the reward, but only after the Feast phase.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 160,
+    "deck": "A",
+    "name": "Sober Man",
+    "description": "In the Feast phase _(phase 9)_ of each round, if you do not place any mead on the “Banquet Table” track, you receive 1 silver _(which you can use for the feast right away)_.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 161,
+    "deck": "B",
+    "name": "Whaling Assistant",
+    "description": "In the Bonus phase _(phase 10)_ of each round, if you have at least 7 Vikings on action spaces in the third column, you also receive 1 cabbage. _(The number of Vikings that are actually on the action spaces can be different from the number of Vikings you placed there initially.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 162,
+    "deck": "C",
+    "name": "Flax Farmer",
+    "description": "In the Bonus phase _(phase 10)_ of each round, if you have at least 7 Vikings on action spaces in the second column, you also receive 1 flax. _(The number of Vikings that are actually on the action spaces can be different from the number of Vikings you placed there initially.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 163,
+    "deck": "A",
+    "name": "Farmhand",
+    "description": "Each time you place 2 Vikings on the “Hunting Game” action space in the second column, if you succeed, you receive an additional 1 hide and 1 silver.",
+    "type": "each time",
+    "errata": "If the relevant action space is not in the game, discard this card and draw a new one.",
+    "harvestBanList": true,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 164,
+    "deck": "A",
+    "name": "Armed Fighter",
+    "description": "Immediately before each time you place 4 Vikings in the fourth column, you can take a “Take 1 Building Resource” action to take 1 stone or 1 ore only.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 165,
+    "deck": "A",
+    "name": "Village Leader",
+    "description": "At the start of the Feast phase _(phase 9)_ of each round, if you then have at least 1 clothing in your supply, you receive 2 silver. _(Clothing on your boards does not count.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 166,
+    "deck": "B",
+    "name": "Weapons Warden",
+    "description": "Immediately before each time you place 2 Vikings in the second column, you can draw 1 weapon card from the face-down draw pile and place it face up in front of you. The first time you do so in a round, you do not receive the weapon card.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 167,
+    "deck": "B",
+    "name": "Taster",
+    "description": "At the start of the Feast phase _(phase 9)_ of each round, if you have 1 spices in your supply, you receive 1 silver. If you have 2 or more spices in your supply, you receive 2 silver instead. _(Spices on your boards do not count.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 168,
+    "deck": "C",
+    "name": "Earl of Lade",
+    "description": "Each time the number of Vikings in your Thing Square becomes exactly 3 during the course of a round, you receive 1 silver. This can happen multiple times per round due to other occupations or failed dice rolls. _(Whether you move Vikings from or to your Thing Square to end up with 3 Vikings does not matter.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 169,
+    "deck": "C",
+    "name": "Sower",
+    "description": "In the Harvest phase _(phase 2)_ of each round with a harvest, if you have at least 1 flax in your supply at the start of the Harvest phase _(phase 2)_, you receive 2 flax instead of 1 during the harvest. If you have at least 1 grain in your supply, you can choose to receive 1 additional grain instead of the additional flax. _(Even when you only receive peas, beans, and flax during the harvest, you can still receive grain via this card, if you meet the requirement. In rounds with no harvest, you do not receive the additional goods.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 170,
+    "deck": "A",
+    "name": "Refugee Helper",
+    "description": "You receive a discount of 2 silver on all “Emigration” actions _(on action spaces or via occupations)_. _(So emigration costs you nothing in the first two rounds, 1 silver in the third round, and so on.)_",
+    "type": "each time",
+    "errata": "Does not apply to small emigrations with a whaling boat.",
+    "harvestBanList": true,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 171,
+    "deck": "A",
+    "name": "Flax Baker",
+    "description": "After the Harvest phase _(phase 2)_ of each round with a harvest, you can immediately exchange 1 flax for 1 grain plus 1 silver.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 172,
+    "deck": "C",
+    "name": "Fish Cook",
+    "description": "After the Feast phase _(phase 9)_ of each round, you can immediately move any or all of the stockfish from your “Banquet Table” track to your _(stone and long)_ houses.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 173,
+    "deck": "B",
+    "name": "Punchcutter",
+    "description": "Each time 1 ore and 2 silver are removed from a mountain strip during the Mountain Strips phase _(phase 11)_, you receive 1 silver and 2 silver, respectively.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 174,
+    "deck": "A",
+    "name": "Bosporus Traveller",
+    "description": "With each new _(pregnant or non-pregnant)_ cattle you place in your cattle stable, you can buy 1 spices for 4 silver. Alternatively, you can buy 1 silk for 3 silver. _(By the way, “bosporus” is Greek for “cattle ford”.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 175,
+    "deck": "B",
+    "name": "Codliver Oil Presser",
+    "description": "Each time you receive at least 1 stockfish from an action _(on an action space or via an occupation)_, you can buy exactly 1 oil for 1 silver. _(This effect does not apply to Bonus.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 176,
+    "deck": "B",
+    "name": "Etiquette Teacher",
+    "description": "Immediately after each time you take an action in which you play at least 1 occupation _(on an action space or via an occupation)_, you receive 1 peas.",
+    "type": "each time",
+    "errata": "Also applies if the card was discarded to gain a VP token.",
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 177,
+    "deck": "B",
+    "name": "Maid",
+    "description": "Each time a stone or long house produces exactly 1 bonus good _(during the Bonus phase or via an occupation)_, you can exchange the bonus good for 1 silverware. _(This effect applies to each of your houses individually and does not apply to houses yielding more or less than 1 bonus good.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 178,
+    "deck": "B",
+    "name": "Boat Builder",
+    "description": "After you play this card, as soon as you have 4 large ships _(knarrs and longships)_, you receive 2 whaling boats without paying wood or silver _(only once via this card)_. _(You only receive whaling boats for which you have room. The amount of ore in the longships does not matter.)_",
+    "type": "as soon as",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 179,
+    "deck": "B",
+    "name": "Cutter Operator",
+    "description": "Next time you acquire a knarr _(and only that once)_, you receive 1 stockfish and 1 silver for each knarr you have _(including the newly acquired one)_.",
+    "type": "as soon as",
+    "errata": "Does not apply to the bonus “knarr” gained from the Waterford exploration board.",
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 180,
+    "deck": "C",
+    "name": "Beach Raider",
+    "description": "After you play this card, as soon as you have 3 _(or 4)_ longships, if your round income at that time is at most 5/11/30 silver, you immediately _(and only that once)_ receive 4/3/2 silverware. _(The amount of ore on your longships does not matter.)_",
+    "type": "as soon as",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  },
+  {
+    "id": 181,
+    "deck": "C",
+    "name": "Sail Patcher",
+    "description": "After you play this card, as soon as you have 3 _(or 4)_ large ships _(knarrs, longships)_, if your round income at that time is at most 4/9/30 silver, you immediately _(and only that once)_ receive 3/2/1 wool. _(The amount of ore on your longships does not matter.)_",
+    "type": "as soon as",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 182,
+    "deck": "C",
+    "name": "Herb Gardener",
+    "description": "As soon as you have at least 2 houses _(2 stone or long houses, or one of each; sheds do not count)_, you can use this card at any time _(but only once)_ to exchange 2/5 wood for 1/2 spices.",
+    "type": "as soon as",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 183,
+    "deck": "C",
+    "name": "Grain Delivery-man",
+    "description": "When you play this card, you immediately _(and only once via this card)_ receive the following crops: If you have at least 1 knarr, you receive 1 peas, 1 beans, and 1 flax. If you have at least 2 knarrs, you also receive 1 grain. If you have at least 3 knarrs, you also receive 1 cabbage. With 4 knarrs, you also receive 1 fruits.",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 184,
+    "deck": "C",
+    "name": "Sponsor",
+    "description": "When you play this card, if you have at least 3 ore in your supply, you can immediately _(and only once via this card)_ buy 1 longship for either 4 wood or 3 silver. _(This is not considered a “Ship Building” action.)_ You must immediately place 3 ore from your supply on the longship. _(If you have fewer than 3 ore, you cannot use this card.)_",
+    "type": "immediate",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 185,
+    "deck": "B",
+    "name": "Dorestad Traveller",
+    "description": "Each time you would take a “Raiding” action _(on an action space or via an occupation)_, you can take a “⇧ 2 Goods” action instead.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 186,
+    "deck": "A",
+    "name": "Pea Flour Baker",
+    "description": "In the Feast phase _(phase 9)_ of each round, you can place up to 2 peas horizontally _(instead of only 1)_ on the “Banquet Table” track. _(Each peas you place after your second must be placed “inefficiently”, i.e., vertically. Tip: this occupation makes the acquisition of a long house worthwhile, because it can provide peas as a bonus good.)_",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 187,
+    "deck": "B",
+    "name": "Chronicler",
+    "description": "Each time you take a Viking action _(in phase 5)_, you can also pay 2 flax to take the “Belt” special tile _(unless another player already owns it)_. At any time and any number of times, you can exchange 3 flax for 1 treasure chest.",
+    "type": "anytime",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 188,
+    "deck": "C",
+    "name": "Mineworker",
+    "description": "When you play this card in a 1/2/3/4-player game, you also receive 0/1/2/3 silver. Each time you take the “2 silver” from the last space of a mountain strip, you receive 1 additional silver. _(If you take multiple “2 silver” items at once, you receive the additional silver for each of them.)_",
+    "type": ["immediate", "each time"],
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 189,
+    "deck": "B",
+    "name": "Seafarer",
+    "description": "During the scoring, if you then have 2/3/4 exploration boards in front of you, you receive 4/9/16 silver, respectively.",
+    "type": "as soon as",
+    "errata": null,
+    "harvestBanList": true,
+    "harvestBanListOptional": false
+  },
+  {
+    "id": 190,
+    "deck": "B",
+    "name": "Bosporus Merchant",
+    "description": "With each new spices you receive in your supply _(in any way)_, you also receive 1 oil.",
+    "type": "each time",
+    "errata": null,
+    "harvestBanList": false,
+    "harvestBanListOptional": true
+  }
+]
